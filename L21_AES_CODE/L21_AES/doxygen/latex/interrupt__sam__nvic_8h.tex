@@ -1,0 +1,64 @@
+\hypertarget{interrupt__sam__nvic_8h}{}\section{src/\+A\+S\+F/common/utils/interrupt/interrupt\+\_\+sam\+\_\+nvic.h File Reference}
+\label{interrupt__sam__nvic_8h}\index{src/\+A\+S\+F/common/utils/interrupt/interrupt\+\_\+sam\+\_\+nvic.\+h@{src/\+A\+S\+F/common/utils/interrupt/interrupt\+\_\+sam\+\_\+nvic.\+h}}
+
+
+Global interrupt management for S\+A\+M D20, S\+A\+M3 and S\+A\+M4 (N\+V\+I\+C based)  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\\*
+{\ttfamily \#include $<$parts.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__interrupt__deprecated__group_gaebdc47e7800e11d79b9e5e2da1fecaa6}{}\#define {\bfseries Enable\+\_\+global\+\_\+interrupt}()~\hyperlink{group__interrupt__group_gae4922a4bd8ba4150211fbc7f2302403c}{cpu\+\_\+irq\+\_\+enable}()\label{group__interrupt__deprecated__group_gaebdc47e7800e11d79b9e5e2da1fecaa6}
+
+\item 
+\hypertarget{group__interrupt__deprecated__group_ga4834270e1b8984fe025bce15e7ae1564}{}\#define {\bfseries Disable\+\_\+global\+\_\+interrupt}()~\hyperlink{group__interrupt__group_ga7b77391ed86e2e027f9ee1dd99a06980}{cpu\+\_\+irq\+\_\+disable}()\label{group__interrupt__deprecated__group_ga4834270e1b8984fe025bce15e7ae1564}
+
+\item 
+\hypertarget{group__interrupt__deprecated__group_gab7b13c60d26b190e73e540586f1868f8}{}\#define {\bfseries Is\+\_\+global\+\_\+interrupt\+\_\+enabled}()~\hyperlink{group__interrupt__group_gae1545a2473614564550b9c4015c94978}{cpu\+\_\+irq\+\_\+is\+\_\+enabled}()\label{group__interrupt__deprecated__group_gab7b13c60d26b190e73e540586f1868f8}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Interrupt Service Routine definition}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__interrupt__group_ga0da0a19156773eca7070722f26ff66a6}{I\+S\+R}(func)~void func (void)
+\begin{DoxyCompactList}\small\item\em Define service routine. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__interrupt__group_ga931b667f6490ad3d8905fa25bebb24b1}{irq\+\_\+initialize\+\_\+vectors}()
+\begin{DoxyCompactList}\small\item\em Initialize interrupt vectors. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__interrupt__group_gaa746642b1132af054826fb169f541965}{irq\+\_\+register\+\_\+handler}(int\+\_\+num,  int\+\_\+prio)
+\begin{DoxyCompactList}\small\item\em Register handler for interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__interrupt__group_ga2b5f1a58b98aea52fbe094636054d910}{}void {\bfseries cpu\+\_\+irq\+\_\+enter\+\_\+critical} (void)\label{group__interrupt__group_ga2b5f1a58b98aea52fbe094636054d910}
+
+\item 
+\hypertarget{group__interrupt__group_gad9a7e953e4e3eb6bde58eb1c81092b43}{}void {\bfseries cpu\+\_\+irq\+\_\+leave\+\_\+critical} (void)\label{group__interrupt__group_gad9a7e953e4e3eb6bde58eb1c81092b43}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__interrupt__group_ga18a272af1cdb2009183461e1647f4e86}{}volatile bool {\bfseries g\+\_\+interrupt\+\_\+enabled}\label{group__interrupt__group_ga18a272af1cdb2009183461e1647f4e86}
+
+\end{DoxyCompactItemize}
+\subsection*{Global interrupt flags}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__interrupt__group_gae4922a4bd8ba4150211fbc7f2302403c}{cpu\+\_\+irq\+\_\+enable}()
+\begin{DoxyCompactList}\small\item\em Enable interrupts globally. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__interrupt__group_ga7b77391ed86e2e027f9ee1dd99a06980}{cpu\+\_\+irq\+\_\+disable}()
+\begin{DoxyCompactList}\small\item\em Disable interrupts globally. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__interrupt__group_gae1545a2473614564550b9c4015c94978}{cpu\+\_\+irq\+\_\+is\+\_\+enabled}()~(\+\_\+\+\_\+get\+\_\+\+P\+R\+I\+M\+A\+S\+K() == 0)
+\begin{DoxyCompactList}\small\item\em Check if interrupts are globally enabled. \end{DoxyCompactList}\item 
+\hypertarget{group__interrupt__group_ga9aa1f52defc97531b6343233abeea613}{}typedef uint32\+\_\+t \hyperlink{group__interrupt__group_ga9aa1f52defc97531b6343233abeea613}{irqflags\+\_\+t}\label{group__interrupt__group_ga9aa1f52defc97531b6343233abeea613}
+
+\begin{DoxyCompactList}\small\item\em Type used for holding state of interrupt flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Global interrupt management for S\+A\+M D20, S\+A\+M3 and S\+A\+M4 (N\+V\+I\+C based) 
+
+Copyright (c) 2012-\/2016 Atmel Corporation. All rights reserved.

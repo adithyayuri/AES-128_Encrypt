@@ -1,0 +1,474 @@
+\hypertarget{group__asfdoc__sam0__drivers__aes__group}{}\section{S\+A\+M Advanced Encryption Standard (A\+E\+S) Driver}
+\label{group__asfdoc__sam0__drivers__aes__group}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaes__config}{aes\+\_\+config}
+\item 
+struct \hyperlink{structaes__module}{aes\+\_\+module}
+\begin{DoxyCompactList}\small\item\em Device structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_gabe2a28b24899440126081426bc669f7d}{aes\+\_\+encrypt\+\_\+mode} \{ \hyperlink{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da39be77f9136f99d5490b45e052107f64}{A\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+I\+O\+N} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da4656e8bd59bf198b469865b3032d0ca5}{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga49472bbd482a7e8ed4664a46b0e6f2d2}{aes\+\_\+key\+\_\+size} \{ \hyperlink{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2ad587af70a08182d1457b0f10c3ca3199}{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+128} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a527fc70da90fc323fb169fcac00eb9e5}{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+192}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a88a196fd9f1eeda1c4010e4c9879922d}{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+256}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga861bf22e2def6a1f86927b08cd59ee95}{aes\+\_\+start\+\_\+mode} \{ \hyperlink{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a823d8cd15aab6c2da258376ef4d623a3}{A\+E\+S\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+\+S\+T\+A\+R\+T} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a3c5507b6985fd69034fa308789561d74}{A\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+S\+T\+A\+R\+T}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga56801d2411b3531545ac95a53665e14f}{aes\+\_\+operation\+\_\+mode} \{ \\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fae1d5433a7ae5b24f27bf1f353d91b807}{A\+E\+S\+\_\+\+E\+C\+B\+\_\+\+M\+O\+D\+E} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa3ef11f785546b23b897a3246d41228b7}{A\+E\+S\+\_\+\+C\+B\+C\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa5a97b189bd808b16bf29691a2d50bb10}{A\+E\+S\+\_\+\+O\+F\+B\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa2aef31f271c03e41a6c2a405c3ce1015}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+M\+O\+D\+E}, 
+\\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fad9d8be8e95b211b7b01085c62d85ff6a}{A\+E\+S\+\_\+\+C\+T\+R\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14faa1bdaec7dbc85a717b83580b3a7da3f0}{A\+E\+S\+\_\+\+C\+C\+M\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa1edcb748b10aea06537f5bf412111139}{A\+E\+S\+\_\+\+G\+C\+M\+\_\+\+M\+O\+D\+E}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga46fc609ea150fb0ad47d8dcc321b9928}{aes\+\_\+cfb\+\_\+size} \{ \\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a6ba2b35e519e31d26893d1793cc17164}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+128} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a17b6d2de759bec7258b958f745cfcca4}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+64}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928af1c7b3a8a35e64482a98f007391b079d}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+32}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a116cc5d89f1df87432af7d6cef5d73bc}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+16}, 
+\\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928add9e8323423b921691e370a884848baa}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+8}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga1e219f13a55ca81c4ef0576d4993d29f}{aes\+\_\+countermeature\+\_\+type} \{ \\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa61c0c057ad9bcb9a0c5a10a5facb03f9}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+disabled} = 0x0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa23893a34d3b84cff04efd24cf74dec67}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+1} = 0x01, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa572dab25430fce4139f3ae1704d2f85e}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+2} = 0x02, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa99f06dd7eab2949eda7b725430d3abef}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+3} = 0x04, 
+\\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29faee42a8c13c82564d674b1d8a8d017691}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+4} = 0x08, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa3344d51b5dc79729c03c84a9aa66824a}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L} = 0x0\+F
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Module Status Flags}
+\label{_amgrpdd98d5e8b9a5fd30d323c8eeeab117f4}%
+A\+E\+S status flags, returned by aes\+\_\+get\+\_\+status() and cleared by aes\+\_\+clear\+\_\+status(). \begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga4bede6c9fbc7ad0a60b8a0f72e07b45e}{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}~(1\+U\+L $<$$<$ 0)
+\item 
+\#define \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae9507d6496a34ddfec7d0aedec331129}{A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}~(1\+U\+L $<$$<$ 1)
+\end{DoxyCompactItemize}
+\subsection*{Configuration and Initialization}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gad56da9d3959afcfe36876b183e5bf5ff}{aes\+\_\+get\+\_\+config\+\_\+defaults} (struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Initializes an A\+E\+S configuration structure to defaults. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga803e7c113963451642ecd4f7c476bf9b}{aes\+\_\+set\+\_\+config} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, \hyperlink{struct_aes}{Aes} $\ast$const hw, struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae8460e5d2f7cbf1cce23fd0125f2ed38}{aes\+\_\+init} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, \hyperlink{struct_aes}{Aes} $\ast$const hw, struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Initialize the A\+E\+S module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Start, Enable, and Write}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae41549e7221a99c62f673c65e2f5ff03}{aes\+\_\+enable} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module)
+\begin{DoxyCompactList}\small\item\em Enable the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gab08f123acee91e3544140b8c6df7b623}{aes\+\_\+disable} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module)
+\begin{DoxyCompactList}\small\item\em Disable the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga736388ff9633a0549299a5e16e048f57}{aes\+\_\+write\+\_\+key} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$key)
+\begin{DoxyCompactList}\small\item\em Write the 128/192/256-\/bit cryptographic key. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga0060dabc9035de262a49d8341079f344}{aes\+\_\+write\+\_\+init\+\_\+vector} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$vector)
+\begin{DoxyCompactList}\small\item\em Write the initialization vector (for the C\+B\+C, C\+F\+B, O\+F\+B, C\+T\+R, and G\+C\+M cipher modes). \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga451967d8225c0d3632d4ebea8d9667ee}{aes\+\_\+write\+\_\+input\+\_\+data} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$p\+\_\+input\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Write the input data (four consecutive 32-\/bit words). \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga7fcad6bd802773d1f2532d4dce46c007}{aes\+\_\+read\+\_\+output\+\_\+data} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, uint32\+\_\+t $\ast$p\+\_\+output\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Read the output data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This driver for Atmel\textregistered{} $\vert$ S\+M\+A\+R\+T A\+R\+M\textregistered{}-\/based microcontrollers provides an interface for the configuration and management of the device's Advanced Encryption Standard functionality. The following driver A\+P\+I modes are covered by this manual\+:
+
+
+\begin{DoxyItemize}
+\item Polled A\+P\+Is
+\item Callback A\+P\+Is
+\end{DoxyItemize}
+
+The Advanced Encryption Standard module supports all five confidentiality modes of operation for symmetrical key block cipher algorithms (as specified in the N\+I\+S\+T Special Publication 800-\/38\+A Recommendation)\+:
+\begin{DoxyItemize}
+\item Electronic Code Book (E\+C\+B)
+\item Cipher Block Chaining (C\+B\+C)
+\item Output Feedback (O\+F\+B)
+\item Cipher Feedback (C\+F\+B)
+\item Counter (C\+T\+R)
+\end{DoxyItemize}
+
+The following peripheral is used by this module\+:
+\begin{DoxyItemize}
+\item A\+E\+S (Advanced Encryption Standard)
+\end{DoxyItemize}
+
+The following devices can use this module\+:
+\begin{DoxyItemize}
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M L21
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M L22
+\end{DoxyItemize}
+
+The outline of this documentation is as follows\+:
+\begin{DoxyItemize}
+\item \hyperlink{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_prerequisites}{Prerequisites}
+\item \hyperlink{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview}{Module Overview}
+\item \hyperlink{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_special_considerations}{Special Considerations}
+\item \hyperlink{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_extra_info}{Extra Information}
+\item \hyperlink{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_examples}{Examples}
+\item \hyperlink{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_api_overview}{A\+P\+I Overview}
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_prerequisites}{}\subsection{Prerequisites}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_prerequisites}
+There are no prerequisites for this module.\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview}{}\subsection{Module Overview}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview}
+The Advanced Encryption Standard (A\+E\+S) is a specification for the encryption of electronic data established by the U.\+S. National Institute of Standards and Technology (N\+I\+S\+T) in 2001. It is compliant with the American F\+I\+P\+S (Federal Information Processing Standard) Publication 197 specification.
+
+The A\+E\+S supports all five confidentiality modes of operation for symmetrical key block cipher algorithms (as specified in the N\+I\+S\+T Special Publication 800-\/38\+A Recommendation)\+:
+\begin{DoxyItemize}
+\item Electronic Code Book (E\+C\+B)
+\item Cipher Block Chaining (C\+B\+C)
+\item Output Feedback (O\+F\+B)
+\item Cipher Feedback (C\+F\+B)
+\item Counter (C\+T\+R)
+\end{DoxyItemize}
+
+Data transfers both to and from the A\+E\+S module can occur using the peripheral D\+M\+A controller channels, thus minimizing processor intervention for large data buffer transfers.
+
+As soon as the initialization vector, the input data and the key are configured, the encryption/decryption process may be started. Once the process has completed the encrypted/decrypted data can be read out via registers or through D\+M\+A channels.\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview_en_de}{}\subsubsection{Encryption and Decryption}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview_en_de}
+The A\+E\+S is capable of using cryptographic keys of 128/192/256 bits to encrypt and decrypt data in blocks of 128 bits. In Cipher Feedback Mode (C\+F\+B), five data sizes are possible (8, 16, 32, 64, or 128 bits).
+
+The input to the encryption processes of the C\+B\+C, C\+F\+B, and O\+F\+B modes includes, in addition to the plaintext, a 128-\/bit data block called the Initialization Vector (I\+V). The Initialization Vector is used in the initial step in the encryption of a message and in the corresponding decryption of the message.
+
+There are three encryption/decryption start modes\+:
+\begin{DoxyItemize}
+\item Manual Mode\+: Start encryption/decryption manually
+\item Auto Start Mode\+: Once the correct number of input data registers is written, processing is automatically started, D\+M\+A operation uses this mode
+\item Last Output Data Mode (L\+O\+D)\+: This mode is used to generate message authentication code (M\+A\+C) on data in C\+C\+M mode of operation
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview_hardware_countermeasures}{}\subsubsection{Hardware Countermeasures}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview_hardware_countermeasures}
+The A\+E\+S module features four types of hardware countermeasures that are useful for protecting data against differential power analysis attacks\+:
+\begin{DoxyItemize}
+\item Type 1\+: Randomly add one cycle to data processing
+\item Type 2\+: Randomly add one cycle to data processing (other version)
+\item Type 3\+: Add a random number of clock cycles to data processing, subject to a maximum of 11/13/15 clock cycles for key sizes of 128/192/256 bits
+\item Type 4\+: Add random spurious power consumption during data processing
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview_gcm}{}\subsubsection{Galois Counter Mode (\+G\+C\+M)}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_module_overview_gcm}
+G\+C\+M is comprised of the A\+E\+S engine in C\+T\+R mode along with a universal hash function (G\+H\+A\+S\+H engine) that is defined over a binary Galois field to produce a message authentication tag. The G\+H\+A\+S\+H engine processes data packets after the A\+E\+S operation. G\+C\+M provides assurance of the confidentiality of data through the A\+E\+S Counter mode of operation for D\+R\+A\+F\+T 920 encryption. Authenticity of the confidential data is assured through the G\+H\+A\+S\+H engine. Refer to the N\+I\+S\+T Special Publication 800-\/38\+D Recommendation for more complete information.\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_special_considerations}{}\subsection{Special Considerations}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_special_considerations}
+There are no special considerations for this module.\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_extra_info}{}\subsection{Extra Information}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_extra_info}
+For extra information, see \hyperlink{asfdoc_sam0_drivers_aes_extra}{Extra Information for Advanced Encryption Standard}. This includes\+:
+\begin{DoxyItemize}
+\item \hyperlink{asfdoc_sam0_drivers_aes_extra_asfdoc_sam0_drivers_aes_extra_acronyms}{Acronyms}
+\item \hyperlink{asfdoc_sam0_drivers_aes_extra_asfdoc_sam0_drivers_aes_extra_dependencies}{Dependencies}
+\item \hyperlink{asfdoc_sam0_drivers_aes_extra_asfdoc_sam0_drivers_aes_extra_errata}{Errata}
+\item \hyperlink{asfdoc_sam0_drivers_aes_extra_asfdoc_sam0_drivers_aes_extra_history}{Module History}
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_examples}{}\subsection{Examples}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_examples}
+For a list of examples related to this driver, see \hyperlink{asfdoc_sam0_drivers_aes_exqsg}{Examples for Advanced Encryption Standard}.\hypertarget{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_api_overview}{}\subsection{A\+P\+I Overview}\label{group__asfdoc__sam0__drivers__aes__group_asfdoc_sam0_drivers_aes_api_overview}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga4bede6c9fbc7ad0a60b8a0f72e07b45e}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E@{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}}
+\index{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E@{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E~(1\+U\+L $<$$<$ 0)}\label{group__asfdoc__sam0__drivers__aes__group_ga4bede6c9fbc7ad0a60b8a0f72e07b45e}
+A\+E\+S encryption complete. \hypertarget{group__asfdoc__sam0__drivers__aes__group_gae9507d6496a34ddfec7d0aedec331129}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E@{A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}}
+\index{A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E@{A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E~(1\+U\+L $<$$<$ 1)}\label{group__asfdoc__sam0__drivers__aes__group_gae9507d6496a34ddfec7d0aedec331129}
+A\+E\+S G\+F multiplication complete. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga46fc609ea150fb0ad47d8dcc321b9928}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+cfb\+\_\+size@{aes\+\_\+cfb\+\_\+size}}
+\index{aes\+\_\+cfb\+\_\+size@{aes\+\_\+cfb\+\_\+size}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+cfb\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aes\+\_\+cfb\+\_\+size}}\label{group__asfdoc__sam0__drivers__aes__group_ga46fc609ea150fb0ad47d8dcc321b9928}
+A\+E\+S Cipher Feed\+Back (C\+F\+B) size. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+128@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+128}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+128@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+128}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a6ba2b35e519e31d26893d1793cc17164}{}A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+128\label{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a6ba2b35e519e31d26893d1793cc17164}
+}]Cipher feedback data size is 128-\/bit \index{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+64@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+64}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+64@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+64}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a17b6d2de759bec7258b958f745cfcca4}{}A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+64\label{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a17b6d2de759bec7258b958f745cfcca4}
+}]Cipher feedback data size is 64-\/bit \index{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+32@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+32}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+32@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+32}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928af1c7b3a8a35e64482a98f007391b079d}{}A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+32\label{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928af1c7b3a8a35e64482a98f007391b079d}
+}]Cipher feedback data size is 32-\/bit \index{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+16@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+16}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+16@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+16}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a116cc5d89f1df87432af7d6cef5d73bc}{}A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+16\label{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a116cc5d89f1df87432af7d6cef5d73bc}
+}]Cipher feedback data size is 16-\/bit \index{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+8@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+8}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+8@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+8}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928add9e8323423b921691e370a884848baa}{}A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+8\label{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928add9e8323423b921691e370a884848baa}
+}]Cipher feedback data size is 8-\/bit \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga1e219f13a55ca81c4ef0576d4993d29f}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+countermeature\+\_\+type@{aes\+\_\+countermeature\+\_\+type}}
+\index{aes\+\_\+countermeature\+\_\+type@{aes\+\_\+countermeature\+\_\+type}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+countermeature\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aes\+\_\+countermeature\+\_\+type}}\label{group__asfdoc__sam0__drivers__aes__group_ga1e219f13a55ca81c4ef0576d4993d29f}
+A\+E\+S countermeasure type \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+disabled@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+disabled}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+disabled@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+disabled}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa61c0c057ad9bcb9a0c5a10a5facb03f9}{}A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+disabled\label{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa61c0c057ad9bcb9a0c5a10a5facb03f9}
+}]Countermeasure type all disabled \index{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+1@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+1}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+1@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+1}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa23893a34d3b84cff04efd24cf74dec67}{}A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+1\label{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa23893a34d3b84cff04efd24cf74dec67}
+}]Countermeasure1 enabled \index{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+2@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+2}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+2@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+2}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa572dab25430fce4139f3ae1704d2f85e}{}A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+2\label{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa572dab25430fce4139f3ae1704d2f85e}
+}]Countermeasure2 enabled \index{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+3@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+3}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+3@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+3}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa99f06dd7eab2949eda7b725430d3abef}{}A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+3\label{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa99f06dd7eab2949eda7b725430d3abef}
+}]Countermeasure3 enabled \index{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+4@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+4}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+4@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+4}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29faee42a8c13c82564d674b1d8a8d017691}{}A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+4\label{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29faee42a8c13c82564d674b1d8a8d017691}
+}]Countermeasure4 enabled \index{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L@{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa3344d51b5dc79729c03c84a9aa66824a}{}A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L\label{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa3344d51b5dc79729c03c84a9aa66824a}
+}]Countermeasure type all enabled \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gabe2a28b24899440126081426bc669f7d}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+encrypt\+\_\+mode@{aes\+\_\+encrypt\+\_\+mode}}
+\index{aes\+\_\+encrypt\+\_\+mode@{aes\+\_\+encrypt\+\_\+mode}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+encrypt\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aes\+\_\+encrypt\+\_\+mode}}\label{group__asfdoc__sam0__drivers__aes__group_gabe2a28b24899440126081426bc669f7d}
+A\+E\+S processing mode. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+I\+O\+N@{A\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+I\+O\+N}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+I\+O\+N@{A\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da39be77f9136f99d5490b45e052107f64}{}A\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+I\+O\+N\label{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da39be77f9136f99d5490b45e052107f64}
+}]Decryption of data will be performed \index{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N@{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N@{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da4656e8bd59bf198b469865b3032d0ca5}{}A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\label{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da4656e8bd59bf198b469865b3032d0ca5}
+}]Encryption of data will be performed \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga49472bbd482a7e8ed4664a46b0e6f2d2}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+key\+\_\+size@{aes\+\_\+key\+\_\+size}}
+\index{aes\+\_\+key\+\_\+size@{aes\+\_\+key\+\_\+size}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+key\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aes\+\_\+key\+\_\+size}}\label{group__asfdoc__sam0__drivers__aes__group_ga49472bbd482a7e8ed4664a46b0e6f2d2}
+A\+E\+S cryptographic key size. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+128@{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+128}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+128@{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+128}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2ad587af70a08182d1457b0f10c3ca3199}{}A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+128\label{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2ad587af70a08182d1457b0f10c3ca3199}
+}]A\+E\+S key size is 128-\/bit \index{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+192@{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+192}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+192@{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+192}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a527fc70da90fc323fb169fcac00eb9e5}{}A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+192\label{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a527fc70da90fc323fb169fcac00eb9e5}
+}]A\+E\+S key size is 192-\/bit \index{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+256@{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+256}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+256@{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+256}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a88a196fd9f1eeda1c4010e4c9879922d}{}A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+256\label{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a88a196fd9f1eeda1c4010e4c9879922d}
+}]A\+E\+S key size is 256-\/bit \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga56801d2411b3531545ac95a53665e14f}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+operation\+\_\+mode@{aes\+\_\+operation\+\_\+mode}}
+\index{aes\+\_\+operation\+\_\+mode@{aes\+\_\+operation\+\_\+mode}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+operation\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aes\+\_\+operation\+\_\+mode}}\label{group__asfdoc__sam0__drivers__aes__group_ga56801d2411b3531545ac95a53665e14f}
+A\+E\+S operation mode. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+E\+S\+\_\+\+E\+C\+B\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+E\+C\+B\+\_\+\+M\+O\+D\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+E\+C\+B\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+E\+C\+B\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fae1d5433a7ae5b24f27bf1f353d91b807}{}A\+E\+S\+\_\+\+E\+C\+B\+\_\+\+M\+O\+D\+E\label{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fae1d5433a7ae5b24f27bf1f353d91b807}
+}]Electronic Codebook (E\+C\+B) \index{A\+E\+S\+\_\+\+C\+B\+C\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+B\+C\+\_\+\+M\+O\+D\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+B\+C\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+B\+C\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa3ef11f785546b23b897a3246d41228b7}{}A\+E\+S\+\_\+\+C\+B\+C\+\_\+\+M\+O\+D\+E\label{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa3ef11f785546b23b897a3246d41228b7}
+}]Cipher Block Chaining (C\+B\+C) \index{A\+E\+S\+\_\+\+O\+F\+B\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+O\+F\+B\+\_\+\+M\+O\+D\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+O\+F\+B\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+O\+F\+B\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa5a97b189bd808b16bf29691a2d50bb10}{}A\+E\+S\+\_\+\+O\+F\+B\+\_\+\+M\+O\+D\+E\label{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa5a97b189bd808b16bf29691a2d50bb10}
+}]Output Feedback (O\+F\+B) \index{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+M\+O\+D\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa2aef31f271c03e41a6c2a405c3ce1015}{}A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+M\+O\+D\+E\label{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa2aef31f271c03e41a6c2a405c3ce1015}
+}]Cipher Feedback (C\+F\+B) \index{A\+E\+S\+\_\+\+C\+T\+R\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+T\+R\+\_\+\+M\+O\+D\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+T\+R\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+T\+R\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fad9d8be8e95b211b7b01085c62d85ff6a}{}A\+E\+S\+\_\+\+C\+T\+R\+\_\+\+M\+O\+D\+E\label{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fad9d8be8e95b211b7b01085c62d85ff6a}
+}]Counter (C\+T\+R) \index{A\+E\+S\+\_\+\+C\+C\+M\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+C\+M\+\_\+\+M\+O\+D\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+C\+C\+M\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+C\+C\+M\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14faa1bdaec7dbc85a717b83580b3a7da3f0}{}A\+E\+S\+\_\+\+C\+C\+M\+\_\+\+M\+O\+D\+E\label{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14faa1bdaec7dbc85a717b83580b3a7da3f0}
+}]Counter (C\+C\+M) \index{A\+E\+S\+\_\+\+G\+C\+M\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+G\+C\+M\+\_\+\+M\+O\+D\+E}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+G\+C\+M\+\_\+\+M\+O\+D\+E@{A\+E\+S\+\_\+\+G\+C\+M\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa1edcb748b10aea06537f5bf412111139}{}A\+E\+S\+\_\+\+G\+C\+M\+\_\+\+M\+O\+D\+E\label{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa1edcb748b10aea06537f5bf412111139}
+}]Galois Counter Mode (G\+C\+M) \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga861bf22e2def6a1f86927b08cd59ee95}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+start\+\_\+mode@{aes\+\_\+start\+\_\+mode}}
+\index{aes\+\_\+start\+\_\+mode@{aes\+\_\+start\+\_\+mode}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+start\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf aes\+\_\+start\+\_\+mode}}\label{group__asfdoc__sam0__drivers__aes__group_ga861bf22e2def6a1f86927b08cd59ee95}
+A\+E\+S start mode. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+E\+S\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+\+S\+T\+A\+R\+T@{A\+E\+S\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+\+S\+T\+A\+R\+T}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+\+S\+T\+A\+R\+T@{A\+E\+S\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a823d8cd15aab6c2da258376ef4d623a3}{}A\+E\+S\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+\+S\+T\+A\+R\+T\label{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a823d8cd15aab6c2da258376ef4d623a3}
+}]Manual start mode \index{A\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+S\+T\+A\+R\+T@{A\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+S\+T\+A\+R\+T}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!A\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+S\+T\+A\+R\+T@{A\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a3c5507b6985fd69034fa308789561d74}{}A\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+S\+T\+A\+R\+T\label{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a3c5507b6985fd69034fa308789561d74}
+}]Auto start mode \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gab08f123acee91e3544140b8c6df7b623}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+disable@{aes\+\_\+disable}}
+\index{aes\+\_\+disable@{aes\+\_\+disable}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_gab08f123acee91e3544140b8c6df7b623}
+
+
+Disable the A\+E\+S module. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gae41549e7221a99c62f673c65e2f5ff03}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+enable@{aes\+\_\+enable}}
+\index{aes\+\_\+enable@{aes\+\_\+enable}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_gae41549e7221a99c62f673c65e2f5ff03}
+
+
+Enable the A\+E\+S module. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gad56da9d3959afcfe36876b183e5bf5ff}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+get\+\_\+config\+\_\+defaults@{aes\+\_\+get\+\_\+config\+\_\+defaults}}
+\index{aes\+\_\+get\+\_\+config\+\_\+defaults@{aes\+\_\+get\+\_\+config\+\_\+defaults}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+get\+\_\+config\+\_\+defaults}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+get\+\_\+config\+\_\+defaults (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+config} $\ast$const}]{config}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_gad56da9d3959afcfe36876b183e5bf5ff}
+
+
+Initializes an A\+E\+S configuration structure to defaults. 
+
+Initializes the specified A\+E\+S configuration structure to a set of known default values.
+
+\begin{DoxyNote}{Note}
+This function should be called to initialize {\bfseries all} new instances of A\+E\+S configuration structures before they are further modified by the user application.
+\end{DoxyNote}
+The default configuration is as follows\+:
+\begin{DoxyItemize}
+\item Data encryption
+\item 128-\/bit A\+E\+S key size
+\item 128-\/bit cipher feedback size
+\item Manual start mode
+\item Electronic Codebook (E\+C\+B) mode
+\item All countermeasures are enabled
+\item X\+R\+O key is disabled
+\item Key generation is disabled
+\item Last output data mode is disabled
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em config} & Pointer to an A\+E\+S configuration structure \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_gae8460e5d2f7cbf1cce23fd0125f2ed38}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+init@{aes\+\_\+init}}
+\index{aes\+\_\+init@{aes\+\_\+init}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module, }
+\item[{{\bf Aes} $\ast$const}]{hw, }
+\item[{struct {\bf aes\+\_\+config} $\ast$const}]{config}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_gae8460e5d2f7cbf1cce23fd0125f2ed38}
+
+
+Initialize the A\+E\+S module. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\mbox{\tt in}  & {\em hw} & Module hardware register base address pointer \\
+\hline
+\mbox{\tt in}  & {\em config} & Pointer to an A\+E\+S configuration structure \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga7fcad6bd802773d1f2532d4dce46c007}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+read\+\_\+output\+\_\+data@{aes\+\_\+read\+\_\+output\+\_\+data}}
+\index{aes\+\_\+read\+\_\+output\+\_\+data@{aes\+\_\+read\+\_\+output\+\_\+data}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+read\+\_\+output\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+read\+\_\+output\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module, }
+\item[{uint32\+\_\+t $\ast$}]{output\+\_\+data\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_ga7fcad6bd802773d1f2532d4dce46c007}
+
+
+Read the output data. 
+
+\begin{DoxyNote}{Note}
+The data buffer that holds the processed data must be large enough to hold four consecutive 32-\/bit words.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\mbox{\tt in}  & {\em output\+\_\+data\+\_\+buffer} & Pointer to an output buffer \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga803e7c113963451642ecd4f7c476bf9b}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+set\+\_\+config@{aes\+\_\+set\+\_\+config}}
+\index{aes\+\_\+set\+\_\+config@{aes\+\_\+set\+\_\+config}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+set\+\_\+config}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+set\+\_\+config (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module, }
+\item[{{\bf Aes} $\ast$const}]{hw, }
+\item[{struct {\bf aes\+\_\+config} $\ast$const}]{config}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_ga803e7c113963451642ecd4f7c476bf9b}
+
+
+Configure the A\+E\+S module. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\mbox{\tt in}  & {\em hw} & Module hardware register base address pointer \\
+\hline
+\mbox{\tt in}  & {\em config} & Pointer to an A\+E\+S configuration structure \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga0060dabc9035de262a49d8341079f344}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+write\+\_\+init\+\_\+vector@{aes\+\_\+write\+\_\+init\+\_\+vector}}
+\index{aes\+\_\+write\+\_\+init\+\_\+vector@{aes\+\_\+write\+\_\+init\+\_\+vector}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+write\+\_\+init\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+write\+\_\+init\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module, }
+\item[{const uint32\+\_\+t $\ast$}]{vector}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_ga0060dabc9035de262a49d8341079f344}
+
+
+Write the initialization vector (for the C\+B\+C, C\+F\+B, O\+F\+B, C\+T\+R, and G\+C\+M cipher modes). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\mbox{\tt in}  & {\em vector} & Pointer to four contiguous 32-\/bit words \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga451967d8225c0d3632d4ebea8d9667ee}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+write\+\_\+input\+\_\+data@{aes\+\_\+write\+\_\+input\+\_\+data}}
+\index{aes\+\_\+write\+\_\+input\+\_\+data@{aes\+\_\+write\+\_\+input\+\_\+data}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+write\+\_\+input\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+write\+\_\+input\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module, }
+\item[{const uint32\+\_\+t $\ast$}]{input\+\_\+data\+\_\+buffer}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_ga451967d8225c0d3632d4ebea8d9667ee}
+
+
+Write the input data (four consecutive 32-\/bit words). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\mbox{\tt in}  & {\em input\+\_\+data\+\_\+buffer} & Pointer to an input data buffer \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__drivers__aes__group_ga736388ff9633a0549299a5e16e048f57}{}\index{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}!aes\+\_\+write\+\_\+key@{aes\+\_\+write\+\_\+key}}
+\index{aes\+\_\+write\+\_\+key@{aes\+\_\+write\+\_\+key}!S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver@{S\+A\+M Advanced Encryption Standard (\+A\+E\+S) Driver}}
+\subsubsection[{aes\+\_\+write\+\_\+key}]{\setlength{\rightskip}{0pt plus 5cm}void aes\+\_\+write\+\_\+key (
+\begin{DoxyParamCaption}
+\item[{struct {\bf aes\+\_\+module} $\ast$const}]{module, }
+\item[{const uint32\+\_\+t $\ast$}]{key}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__drivers__aes__group_ga736388ff9633a0549299a5e16e048f57}
+
+
+Write the 128/192/256-\/bit cryptographic key. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em module} & Pointer to the software instance struct \\
+\hline
+\mbox{\tt in}  & {\em key} & Pointer to 4/6/8 contiguous 32-\/bit words\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The key size depends on the current A\+E\+S configuration. 
+\end{DoxyNote}

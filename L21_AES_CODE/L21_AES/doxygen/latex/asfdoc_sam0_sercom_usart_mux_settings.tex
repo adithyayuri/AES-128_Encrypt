@@ -1,0 +1,19 @@
+The following lists the possible internal S\+E\+R\+C\+O\+M module pad function assignments, for the four S\+E\+R\+C\+O\+M pads when in U\+S\+A\+R\+T mode. Note that this is in addition to the physical G\+P\+I\+O pin M\+U\+X of the device, and can be used in conjunction to optimize the serial data pin-\/out.
+
+When T\+X and R\+X are connected to the same pin, the U\+S\+A\+R\+T will operate in half-\/duplex mode if both one transmitter and several receivers are enabled.
+
+\begin{DoxyNote}{Note}
+When R\+X and X\+C\+K are connected to the same pin, the receiver must not be enabled if the U\+S\+A\+R\+T is configured to use an external clock.
+\end{DoxyNote}
+\begin{TabularC}{5}
+\hline
+\rowcolor{lightgray}{\bf M\+U\+X/\+Pad }&{\bf P\+A\+D 0 }&{\bf P\+A\+D 1 }&{\bf P\+A\+D 2 }&{\bf P\+A\+D 3  }\\\cline{1-5}
+R\+X\+\_\+0\+\_\+\+T\+X\+\_\+0\+\_\+\+X\+C\+K\+\_\+1 &T\+X / R\+X &X\+C\+K &-\/ &-\/  \\\cline{1-5}
+R\+X\+\_\+0\+\_\+\+T\+X\+\_\+2\+\_\+\+X\+C\+K\+\_\+3 &R\+X &-\/ &T\+X &X\+C\+K  \\\cline{1-5}
+R\+X\+\_\+1\+\_\+\+T\+X\+\_\+0\+\_\+\+X\+C\+K\+\_\+1 &T\+X &R\+X / X\+C\+K &-\/ &-\/  \\\cline{1-5}
+R\+X\+\_\+1\+\_\+\+T\+X\+\_\+2\+\_\+\+X\+C\+K\+\_\+3 &-\/ &R\+X &T\+X &X\+C\+K  \\\cline{1-5}
+R\+X\+\_\+2\+\_\+\+T\+X\+\_\+0\+\_\+\+X\+C\+K\+\_\+1 &T\+X &X\+C\+K &R\+X &-\/  \\\cline{1-5}
+R\+X\+\_\+2\+\_\+\+T\+X\+\_\+2\+\_\+\+X\+C\+K\+\_\+3 &-\/ &-\/ &T\+X / R\+X &X\+C\+K  \\\cline{1-5}
+R\+X\+\_\+3\+\_\+\+T\+X\+\_\+0\+\_\+\+X\+C\+K\+\_\+1 &T\+X &X\+C\+K &-\/ &R\+X  \\\cline{1-5}
+R\+X\+\_\+3\+\_\+\+T\+X\+\_\+2\+\_\+\+X\+C\+K\+\_\+3 &-\/ &-\/ &T\+X &R\+X / X\+C\+K  \\\cline{1-5}
+\end{TabularC}

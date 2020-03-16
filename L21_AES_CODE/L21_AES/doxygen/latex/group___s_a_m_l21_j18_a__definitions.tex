@@ -1,0 +1,179 @@
+\hypertarget{group___s_a_m_l21_j18_a__definitions}{}\section{S\+A\+M\+L21\+J18\+A definitions}
+\label{group___s_a_m_l21_j18_a__definitions}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___s_a_m_l21_j18_a__cmsis}{C\+M\+S\+I\+S Definitions}
+\item 
+\hyperlink{group___s_a_m_l21_j18_a__api}{Peripheral Software A\+P\+I}
+\begin{DoxyCompactList}\small\item\em C\+M\+S\+I\+S includes. \end{DoxyCompactList}\item 
+\hyperlink{group___s_a_m_l21_j18_a__reg}{Registers Access Definitions}
+\item 
+\hyperlink{group___s_a_m_l21_j18_a__id}{Peripheral Ids Definitions}
+\item 
+\hyperlink{group___s_a_m_l21_j18_a__base}{Peripheral Base Address Definitions}
+\item 
+\hyperlink{group___s_a_m_l21_j18_a__port}{P\+O\+R\+T Definitions}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga015dfee129875688293180ddef474138}{}\#define {\bfseries C\+A\+S\+T}(type,  value)~((type $\ast$)(value))\label{group___s_a_m_l21_j18_a__definitions_ga015dfee129875688293180ddef474138}
+
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_gad9dd6ceb323c1d2d3caf66d30ea9a47b}{R\+E\+G\+\_\+\+A\+C\+C\+E\+S\+S}(type,  address)~($\ast$(type$\ast$)(address))
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_gae69620948dea1b76e0ab7843ab719db7}{F\+L\+A\+S\+H\+\_\+\+S\+I\+Z\+E}~0x40000\+U\+L /$\ast$ 256 k\+B $\ast$/
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga4cc14e2c99ae7f8e5a8e371d03c8532c}{}\#define {\bfseries F\+L\+A\+S\+H\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+Z\+E}~64\label{group___s_a_m_l21_j18_a__definitions_ga4cc14e2c99ae7f8e5a8e371d03c8532c}
+
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga264f8ab3607e09ec028c32cb7538fd91}{}\#define {\bfseries F\+L\+A\+S\+H\+\_\+\+N\+B\+\_\+\+O\+F\+\_\+\+P\+A\+G\+E\+S}~4096\label{group___s_a_m_l21_j18_a__definitions_ga264f8ab3607e09ec028c32cb7538fd91}
+
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga595d6fe8572383d794338e55614a5a7f}{}\#define {\bfseries F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+Z\+E}~64\label{group___s_a_m_l21_j18_a__definitions_ga595d6fe8572383d794338e55614a5a7f}
+
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga040f18fbf6c4bc15bb219c5d0f366bbe}{}\#define {\bfseries H\+S\+R\+A\+M\+\_\+\+S\+I\+Z\+E}~0x8000\+U\+L /$\ast$ 32 k\+B $\ast$/\label{group___s_a_m_l21_j18_a__definitions_ga040f18fbf6c4bc15bb219c5d0f366bbe}
+
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga3217e2de46c0d985abed039716280226}{}\#define {\bfseries L\+P\+R\+A\+M\+\_\+\+S\+I\+Z\+E}~0x2000\+U\+L /$\ast$ 8 k\+B $\ast$/\label{group___s_a_m_l21_j18_a__definitions_ga3217e2de46c0d985abed039716280226}
+
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_ga485a21e55bcc66416a04d2fec83513fa}{F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R}~(0x00000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_ga263dc504b29b21d616514ac65000957e}{F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+D\+R}~(0x00800000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_ga4af52d124825da5da360f11f45660723}{H\+S\+R\+A\+M\+\_\+\+A\+D\+D\+R}~(0x20000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_gafcca70ccd0ff44656cf27b68218ef780}{L\+P\+R\+A\+M\+\_\+\+A\+D\+D\+R}~(0x30000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_gaa3dc0741f009f571f4a45086601718f6}{H\+P\+B0\+\_\+\+A\+D\+D\+R}~(0x40000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_gabdae009c8fef488e4248183ffa937535}{H\+P\+B1\+\_\+\+A\+D\+D\+R}~(0x41000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_gaef42fa53ddf169a2a50be70d29f73571}{H\+P\+B2\+\_\+\+A\+D\+D\+R}~(0x42000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_gaf04cc27901ff4e0551572de8a92be273}{H\+P\+B3\+\_\+\+A\+D\+D\+R}~(0x43000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_ga715f8d0987dbf1b42ee8453b72b03b9f}{H\+P\+B4\+\_\+\+A\+D\+D\+R}~(0x44000000u)
+\item 
+\#define \hyperlink{group___s_a_m_l21_j18_a__definitions_ga8895d0a3a9a3126cc44330f86c8ce564}{P\+P\+B\+\_\+\+A\+D\+D\+R}~(0x\+E0000000u)
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_gada75131d542c9e1966238f5488f89bd6}{}\#define {\bfseries D\+S\+U\+\_\+\+D\+I\+D\+\_\+\+R\+E\+S\+E\+T\+V\+A\+L\+U\+E}~0x10810000\+U\+L\label{group___s_a_m_l21_j18_a__definitions_gada75131d542c9e1966238f5488f89bd6}
+
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_gacb7a115808eeb0b50bd55888f9ba65ae}{}\#define {\bfseries N\+V\+M\+C\+T\+R\+L\+\_\+\+R\+W\+W\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+Z\+E}~0x2000\+U\+L /$\ast$ 8 k\+B $\ast$/\label{group___s_a_m_l21_j18_a__definitions_gacb7a115808eeb0b50bd55888f9ba65ae}
+
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_gab9243ffe03a1dc631b57a495b4b3d467}{}\#define {\bfseries P\+O\+R\+T\+\_\+\+G\+R\+O\+U\+P\+S}~2\label{group___s_a_m_l21_j18_a__definitions_gab9243ffe03a1dc631b57a495b4b3d467}
+
+\item 
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga880f394946155d1e85a5fde38b7f825a}{}\#define {\bfseries U\+S\+B\+\_\+\+H\+O\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D}~1\label{group___s_a_m_l21_j18_a__definitions_ga880f394946155d1e85a5fde38b7f825a}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef volatile const uint32\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_ga5d556f8391af4141be23f7334ac9dd68}{Ro\+Reg}
+\item 
+typedef volatile const uint16\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_gaebf6e33c2d49a802e06e22a95ea9d0d0}{Ro\+Reg16}
+\item 
+typedef volatile const uint8\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_ga0d957f1433aaf5d70e4dc2b68288442d}{Ro\+Reg8}
+\item 
+typedef volatile uint32\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_gac0f96d4e8018367b38f527007cf0eafd}{Wo\+Reg}
+\item 
+typedef volatile uint16\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_ga0ab0e5f6c8301aa1c2068e511d854094}{Wo\+Reg16}
+\item 
+typedef volatile uint8\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_ga5e336e5a36ee12ebeafb021108e5275b}{Wo\+Reg8}
+\item 
+typedef volatile uint32\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_gacf1496e3bbe303e55f627fc7558a68c7}{Rw\+Reg}
+\item 
+typedef volatile uint16\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_gacce07556c80fc352ae607f225f19fed5}{Rw\+Reg16}
+\item 
+typedef volatile uint8\+\_\+t \hyperlink{group___s_a_m_l21_j18_a__definitions_gae361754be775bb192f85821d3ab33c17}{Rw\+Reg8}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file defines all structures and symbols for S\+A\+M\+L21\+J18\+A\+:
+\begin{DoxyItemize}
+\item registers and bitfields
+\item peripheral base address
+\item peripheral I\+D
+\item P\+I\+O definitions 
+\end{DoxyItemize}
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga485a21e55bcc66416a04d2fec83513fa}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R@{F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R}}
+\index{F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R@{F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+A\+S\+H\+\_\+\+A\+D\+D\+R~(0x00000000u)}\label{group___s_a_m_l21_j18_a__definitions_ga485a21e55bcc66416a04d2fec83513fa}
+F\+L\+A\+S\+H base address \hypertarget{group___s_a_m_l21_j18_a__definitions_gae69620948dea1b76e0ab7843ab719db7}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!F\+L\+A\+S\+H\+\_\+\+S\+I\+Z\+E@{F\+L\+A\+S\+H\+\_\+\+S\+I\+Z\+E}}
+\index{F\+L\+A\+S\+H\+\_\+\+S\+I\+Z\+E@{F\+L\+A\+S\+H\+\_\+\+S\+I\+Z\+E}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{F\+L\+A\+S\+H\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+A\+S\+H\+\_\+\+S\+I\+Z\+E~0x40000\+U\+L /$\ast$ 256 k\+B $\ast$/}\label{group___s_a_m_l21_j18_a__definitions_gae69620948dea1b76e0ab7843ab719db7}
+M\+E\+M\+O\+R\+Y M\+A\+P\+P\+I\+N\+G D\+E\+F\+I\+N\+I\+T\+I\+O\+N\+S F\+O\+R S\+A\+M\+L21\+J18\+A \hypertarget{group___s_a_m_l21_j18_a__definitions_ga263dc504b29b21d616514ac65000957e}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+D\+R@{F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+D\+R}}
+\index{F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+D\+R@{F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+A\+D\+D\+R~(0x00800000u)}\label{group___s_a_m_l21_j18_a__definitions_ga263dc504b29b21d616514ac65000957e}
+F\+L\+A\+S\+H\+\_\+\+U\+S\+E\+R\+\_\+\+P\+A\+G\+E base address \hypertarget{group___s_a_m_l21_j18_a__definitions_gaa3dc0741f009f571f4a45086601718f6}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!H\+P\+B0\+\_\+\+A\+D\+D\+R@{H\+P\+B0\+\_\+\+A\+D\+D\+R}}
+\index{H\+P\+B0\+\_\+\+A\+D\+D\+R@{H\+P\+B0\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{H\+P\+B0\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+P\+B0\+\_\+\+A\+D\+D\+R~(0x40000000u)}\label{group___s_a_m_l21_j18_a__definitions_gaa3dc0741f009f571f4a45086601718f6}
+H\+P\+B0 base address \hypertarget{group___s_a_m_l21_j18_a__definitions_gabdae009c8fef488e4248183ffa937535}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!H\+P\+B1\+\_\+\+A\+D\+D\+R@{H\+P\+B1\+\_\+\+A\+D\+D\+R}}
+\index{H\+P\+B1\+\_\+\+A\+D\+D\+R@{H\+P\+B1\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{H\+P\+B1\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+P\+B1\+\_\+\+A\+D\+D\+R~(0x41000000u)}\label{group___s_a_m_l21_j18_a__definitions_gabdae009c8fef488e4248183ffa937535}
+H\+P\+B1 base address \hypertarget{group___s_a_m_l21_j18_a__definitions_gaef42fa53ddf169a2a50be70d29f73571}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!H\+P\+B2\+\_\+\+A\+D\+D\+R@{H\+P\+B2\+\_\+\+A\+D\+D\+R}}
+\index{H\+P\+B2\+\_\+\+A\+D\+D\+R@{H\+P\+B2\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{H\+P\+B2\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+P\+B2\+\_\+\+A\+D\+D\+R~(0x42000000u)}\label{group___s_a_m_l21_j18_a__definitions_gaef42fa53ddf169a2a50be70d29f73571}
+H\+P\+B2 base address \hypertarget{group___s_a_m_l21_j18_a__definitions_gaf04cc27901ff4e0551572de8a92be273}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!H\+P\+B3\+\_\+\+A\+D\+D\+R@{H\+P\+B3\+\_\+\+A\+D\+D\+R}}
+\index{H\+P\+B3\+\_\+\+A\+D\+D\+R@{H\+P\+B3\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{H\+P\+B3\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+P\+B3\+\_\+\+A\+D\+D\+R~(0x43000000u)}\label{group___s_a_m_l21_j18_a__definitions_gaf04cc27901ff4e0551572de8a92be273}
+H\+P\+B3 base address \hypertarget{group___s_a_m_l21_j18_a__definitions_ga715f8d0987dbf1b42ee8453b72b03b9f}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!H\+P\+B4\+\_\+\+A\+D\+D\+R@{H\+P\+B4\+\_\+\+A\+D\+D\+R}}
+\index{H\+P\+B4\+\_\+\+A\+D\+D\+R@{H\+P\+B4\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{H\+P\+B4\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+P\+B4\+\_\+\+A\+D\+D\+R~(0x44000000u)}\label{group___s_a_m_l21_j18_a__definitions_ga715f8d0987dbf1b42ee8453b72b03b9f}
+H\+P\+B4 base address \hypertarget{group___s_a_m_l21_j18_a__definitions_ga4af52d124825da5da360f11f45660723}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!H\+S\+R\+A\+M\+\_\+\+A\+D\+D\+R@{H\+S\+R\+A\+M\+\_\+\+A\+D\+D\+R}}
+\index{H\+S\+R\+A\+M\+\_\+\+A\+D\+D\+R@{H\+S\+R\+A\+M\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{H\+S\+R\+A\+M\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+S\+R\+A\+M\+\_\+\+A\+D\+D\+R~(0x20000000u)}\label{group___s_a_m_l21_j18_a__definitions_ga4af52d124825da5da360f11f45660723}
+H\+S\+R\+A\+M base address \hypertarget{group___s_a_m_l21_j18_a__definitions_gafcca70ccd0ff44656cf27b68218ef780}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!L\+P\+R\+A\+M\+\_\+\+A\+D\+D\+R@{L\+P\+R\+A\+M\+\_\+\+A\+D\+D\+R}}
+\index{L\+P\+R\+A\+M\+\_\+\+A\+D\+D\+R@{L\+P\+R\+A\+M\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{L\+P\+R\+A\+M\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+P\+R\+A\+M\+\_\+\+A\+D\+D\+R~(0x30000000u)}\label{group___s_a_m_l21_j18_a__definitions_gafcca70ccd0ff44656cf27b68218ef780}
+L\+P\+R\+A\+M base address \hypertarget{group___s_a_m_l21_j18_a__definitions_ga8895d0a3a9a3126cc44330f86c8ce564}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!P\+P\+B\+\_\+\+A\+D\+D\+R@{P\+P\+B\+\_\+\+A\+D\+D\+R}}
+\index{P\+P\+B\+\_\+\+A\+D\+D\+R@{P\+P\+B\+\_\+\+A\+D\+D\+R}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{P\+P\+B\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+P\+B\+\_\+\+A\+D\+D\+R~(0x\+E0000000u)}\label{group___s_a_m_l21_j18_a__definitions_ga8895d0a3a9a3126cc44330f86c8ce564}
+P\+P\+B base address \hypertarget{group___s_a_m_l21_j18_a__definitions_gad9dd6ceb323c1d2d3caf66d30ea9a47b}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!R\+E\+G\+\_\+\+A\+C\+C\+E\+S\+S@{R\+E\+G\+\_\+\+A\+C\+C\+E\+S\+S}}
+\index{R\+E\+G\+\_\+\+A\+C\+C\+E\+S\+S@{R\+E\+G\+\_\+\+A\+C\+C\+E\+S\+S}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{R\+E\+G\+\_\+\+A\+C\+C\+E\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+G\+\_\+\+A\+C\+C\+E\+S\+S(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{address}
+\end{DoxyParamCaption}
+)~($\ast$(type$\ast$)(address))}\label{group___s_a_m_l21_j18_a__definitions_gad9dd6ceb323c1d2d3caf66d30ea9a47b}
+C code\+: Register value 
+
+\subsection{Typedef Documentation}
+\hypertarget{group___s_a_m_l21_j18_a__definitions_ga5d556f8391af4141be23f7334ac9dd68}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Ro\+Reg@{Ro\+Reg}}
+\index{Ro\+Reg@{Ro\+Reg}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Ro\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile const uint32\+\_\+t {\bf Ro\+Reg}}\label{group___s_a_m_l21_j18_a__definitions_ga5d556f8391af4141be23f7334ac9dd68}
+Read only 32-\/bit register (volatile const unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_gaebf6e33c2d49a802e06e22a95ea9d0d0}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Ro\+Reg16@{Ro\+Reg16}}
+\index{Ro\+Reg16@{Ro\+Reg16}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Ro\+Reg16}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile const uint16\+\_\+t {\bf Ro\+Reg16}}\label{group___s_a_m_l21_j18_a__definitions_gaebf6e33c2d49a802e06e22a95ea9d0d0}
+Read only 16-\/bit register (volatile const unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_ga0d957f1433aaf5d70e4dc2b68288442d}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Ro\+Reg8@{Ro\+Reg8}}
+\index{Ro\+Reg8@{Ro\+Reg8}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Ro\+Reg8}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile const uint8\+\_\+t {\bf Ro\+Reg8}}\label{group___s_a_m_l21_j18_a__definitions_ga0d957f1433aaf5d70e4dc2b68288442d}
+Read only 8-\/bit register (volatile const unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_gacf1496e3bbe303e55f627fc7558a68c7}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Rw\+Reg@{Rw\+Reg}}
+\index{Rw\+Reg@{Rw\+Reg}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Rw\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile uint32\+\_\+t {\bf Rw\+Reg}}\label{group___s_a_m_l21_j18_a__definitions_gacf1496e3bbe303e55f627fc7558a68c7}
+Read-\/\+Write 32-\/bit register (volatile unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_gacce07556c80fc352ae607f225f19fed5}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Rw\+Reg16@{Rw\+Reg16}}
+\index{Rw\+Reg16@{Rw\+Reg16}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Rw\+Reg16}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile uint16\+\_\+t {\bf Rw\+Reg16}}\label{group___s_a_m_l21_j18_a__definitions_gacce07556c80fc352ae607f225f19fed5}
+Read-\/\+Write 16-\/bit register (volatile unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_gae361754be775bb192f85821d3ab33c17}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Rw\+Reg8@{Rw\+Reg8}}
+\index{Rw\+Reg8@{Rw\+Reg8}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Rw\+Reg8}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile uint8\+\_\+t {\bf Rw\+Reg8}}\label{group___s_a_m_l21_j18_a__definitions_gae361754be775bb192f85821d3ab33c17}
+Read-\/\+Write 8-\/bit register (volatile unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_gac0f96d4e8018367b38f527007cf0eafd}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Wo\+Reg@{Wo\+Reg}}
+\index{Wo\+Reg@{Wo\+Reg}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Wo\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile uint32\+\_\+t {\bf Wo\+Reg}}\label{group___s_a_m_l21_j18_a__definitions_gac0f96d4e8018367b38f527007cf0eafd}
+Write only 32-\/bit register (volatile unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_ga0ab0e5f6c8301aa1c2068e511d854094}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Wo\+Reg16@{Wo\+Reg16}}
+\index{Wo\+Reg16@{Wo\+Reg16}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Wo\+Reg16}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile uint16\+\_\+t {\bf Wo\+Reg16}}\label{group___s_a_m_l21_j18_a__definitions_ga0ab0e5f6c8301aa1c2068e511d854094}
+Write only 16-\/bit register (volatile unsigned int) \hypertarget{group___s_a_m_l21_j18_a__definitions_ga5e336e5a36ee12ebeafb021108e5275b}{}\index{S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}!Wo\+Reg8@{Wo\+Reg8}}
+\index{Wo\+Reg8@{Wo\+Reg8}!S\+A\+M\+L21\+J18\+A definitions@{S\+A\+M\+L21\+J18\+A definitions}}
+\subsubsection[{Wo\+Reg8}]{\setlength{\rightskip}{0pt plus 5cm}typedef volatile uint8\+\_\+t {\bf Wo\+Reg8}}\label{group___s_a_m_l21_j18_a__definitions_ga5e336e5a36ee12ebeafb021108e5275b}
+Write only 8-\/bit register (volatile unsigned int) 

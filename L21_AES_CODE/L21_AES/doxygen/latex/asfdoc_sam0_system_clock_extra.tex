@@ -1,0 +1,40 @@
+\hypertarget{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_acronyms}{}\section{Acronyms}\label{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_acronyms}
+Below is a table listing the acronyms used in this module, along with their intended meanings.
+
+\begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Acronym }&{\bf Description  }\\\cline{1-2}
+D\+F\+L\+L &Digital Frequency Locked Loop  \\\cline{1-2}
+M\+U\+X &Multiplexer  \\\cline{1-2}
+M\+C\+L\+K &Main Clock  \\\cline{1-2}
+O\+S\+C32\+K &Internal 32\+K\+Hz Oscillator  \\\cline{1-2}
+O\+S\+C16\+M &Internal 16\+M\+Hz Oscillator  \\\cline{1-2}
+P\+L\+L &Phase Locked Loop  \\\cline{1-2}
+O\+S\+C &Oscillator  \\\cline{1-2}
+X\+O\+S\+C &External Oscillator  \\\cline{1-2}
+X\+O\+S\+C32\+K &External 32\+K\+Hz Oscillator  \\\cline{1-2}
+A\+H\+B &Advanced High-\/performance Bus  \\\cline{1-2}
+A\+P\+B &Advanced Peripheral Bus  \\\cline{1-2}
+D\+P\+L\+L &Digital Phase Locked Loop  \\\cline{1-2}
+\end{TabularC}
+\hypertarget{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_dependencies}{}\section{Dependencies}\label{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_dependencies}
+This driver has the following dependencies\+:
+
+
+\begin{DoxyItemize}
+\item None
+\end{DoxyItemize}\hypertarget{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_errata}{}\section{Errata}\label{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_errata}
+
+\begin{DoxyItemize}
+\item This driver implements experimental workaround for errata 9905
+
+\char`\"{}\+The D\+F\+L\+L clock must be requested before being configured. Otherwise a
+   write access to a D\+F\+L\+L register can freeze the device.\char`\"{} This driver will enable and configure the D\+F\+L\+L before the O\+N\+D\+E\+M\+A\+N\+D bit is set.
+\end{DoxyItemize}\hypertarget{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_history}{}\section{Module History}\label{asfdoc_sam0_system_clock_extra_asfdoc_sam0_system_clock_extra_history}
+An overview of the module history is presented in the table below, with details on the enhancements and fixes made to the module since its first release. The current version of this corresponds to the newest version in the table.
+
+\begin{TabularC}{1}
+\hline
+\rowcolor{lightgray}{\bf Changelog  }\\\cline{1-1}
+Initial Release  \\\cline{1-1}
+\end{TabularC}

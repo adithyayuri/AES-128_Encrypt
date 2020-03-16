@@ -1,0 +1,388 @@
+\hypertarget{group__asfdoc__sam0__system__group}{}\section{S\+A\+M System (S\+Y\+S\+T\+E\+M) Driver}
+\label{group__asfdoc__sam0__system__group}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsystem__standby__config}{system\+\_\+standby\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Standby configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structsystem__voltage__regulator__config}{system\+\_\+voltage\+\_\+regulator\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Voltage Regulator System (V\+R\+E\+G) Control configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structsystem__voltage__references__config}{system\+\_\+voltage\+\_\+references\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Voltage References System (V\+R\+E\+F) Control configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structsystem__battery__backup__power__switch__config}{system\+\_\+battery\+\_\+backup\+\_\+power\+\_\+switch\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Battery Backup Power Switch (B\+B\+P\+S) Control configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga6a75333c00b88a5da14eb9ba5ead2be1}{system\+\_\+sleepmode} \{ \hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a32cc6cbf4e09dd7ddb48d85ff68318ff}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E(0x2), 
+\hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a446eddfe38bc09277ed1863ffac261e3}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y, 
+\hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a360b0bad9094c97ac42939b4e9e20558}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P, 
+\hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a1b54051b5cd49be09cc5d0ef754d3577}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F
+ \}
+\begin{DoxyCompactList}\small\item\em Device sleep modes. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gabb931fb8f68c63f6c16e0ba5c3d93897}{system\+\_\+performance\+\_\+level} \{ \hyperlink{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a3fc6c9d26dc0afdb2f1202d26a7a142d}{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+0} = P\+M\+\_\+\+P\+L\+C\+F\+G\+\_\+\+P\+L\+S\+E\+L\+\_\+\+P\+L0, 
+\hyperlink{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a8a72bbc163e10dbfb113f77ce599cbce}{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+2} = P\+M\+\_\+\+P\+L\+C\+F\+G\+\_\+\+P\+L\+S\+E\+L\+\_\+\+P\+L2
+ \}
+\begin{DoxyCompactList}\small\item\em Performance level. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga27a2c6a3d0366e83663283710aadd543}{system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode} \{ \hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a7bcbf5ea037337a5f421c57b05903c45}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+R\+E\+T\+E\+N\+T\+I\+O\+N} = 0, 
+\hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543ac9f3ee0336e73d4608ced9558f4abde7}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y}, 
+\hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a5650cfc29e1185a89314c178a9836a1e}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+O\+F\+F}, 
+\hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543aca0a2bd1af74f60fd723bf3362857fb1}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+O\+F\+F}
+ \}
+\begin{DoxyCompactList}\small\item\em R\+A\+M Back-\/biasing mode. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga25dcee48e4c92abeee6351d1bc1b2e42}{system\+\_\+voltage\+\_\+regulator\+\_\+sel} \{ \hyperlink{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a7fbf348d20ce203d62ea66bfed9dad9c}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+D\+O} = S\+U\+P\+C\+\_\+\+V\+R\+E\+G\+\_\+\+S\+E\+L\+\_\+\+L\+D\+O\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a59a0a187cf734783f2cae265c5c61da4}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+B\+U\+C\+K} = S\+U\+P\+C\+\_\+\+V\+R\+E\+G\+\_\+\+S\+E\+L\+\_\+\+B\+U\+C\+K\+\_\+\+Val
+ \}
+\begin{DoxyCompactList}\small\item\em Voltage regulator. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga07175f24498545cf119e3d514f13e2e7}{system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency} \{ \hyperlink{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a8cef476457bf84def2af2b9be4cadaee}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}, 
+\hyperlink{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a15dd296506e48391c460e19ec6cd782b}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+H\+I\+G\+H\+T\+E\+S\+T}
+ \}
+\begin{DoxyCompactList}\small\item\em Low power efficiency. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga05cd664c0c675f440e25980147d01f15}{system\+\_\+voltage\+\_\+references\+\_\+sel} \{ \\*
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a1e21094a8b6dc3b6736cf41d49f530d2}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V0} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V0\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a71b922baf8ccc6a48f5539f256f90524}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V1} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V1\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15af9148c9356e4b89f8495cd02b63558f3}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V2} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V2\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15ad836b46f9503e9d134e0cc6cebcb013e}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V25} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V25\+\_\+\+Val, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a324b9f9e049ccdd46a68efa4dd487898}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V0} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V0\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a3221e830a3effa8556c2bae3ce6daa6c}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V2} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V2\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a5044713c58324b60a7099a0982b6aee4}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V4} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V4\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a92eed9eb4ca1bb22b2ed51e5fa04429d}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V5} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V5\+\_\+\+Val
+ \}
+\begin{DoxyCompactList}\small\item\em Voltage reference value. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gab2f5386110553d7c7501d7329a165b91}{system\+\_\+battery\+\_\+power\+\_\+switch} \{ \hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a19d960eac39561f4bf510144b30c17d0}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+O\+N\+E} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+N\+O\+N\+E\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91aaa701e5d2c66243ef689e14ef3cf7c7d}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+C} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+A\+P\+W\+S\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91afff2e8d4e8bb2ca190e43a540bdc7c35}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+F\+O\+R\+C\+E\+D} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a0f3607410bf048dbe96724a265b93846}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+B\+O\+D33} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+B\+O\+D33\+\_\+\+Val
+ \}
+\begin{DoxyCompactList}\small\item\em Battery power switch configuration enum. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gae3ed274224184cfb1d173b146bd72170}{system\+\_\+voltage\+\_\+reference} \{ \hyperlink{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170aec400f1f06b7017c7fdca8e2c8205e36}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+E\+M\+P\+S\+E\+N\+S\+E}, 
+\hyperlink{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170ad43a090b917baa0bc23ac3f64d6a4958}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+O\+U\+T\+P\+U\+T}
+ \}
+\begin{DoxyCompactList}\small\item\em Voltage reference. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga63d5519343f245cdbf57c247f1b50822}{system\+\_\+backup\+\_\+pin} \{ \hyperlink{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822a37c45e27e161a1a5df2e345ba3a3167f}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+P\+S\+O\+K} = (0x1 $<$$<$ 0), 
+\hyperlink{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa59523841e0d0349470befd4bc1c36a4}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+0} = (0x1 $<$$<$ 1), 
+\hyperlink{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa07ecd1efac7cb215843db99ebff443f}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+1} = (0x1 $<$$<$ 2)
+ \}
+\begin{DoxyCompactList}\small\item\em Backup I\+O enum. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gad1757cdfed2f30f012a3aec2e0f67ad3}{system\+\_\+reset\+\_\+cause} \{ \\*
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a43a00fe664fc187f036f5208d550942b}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a8e5fb81626f25f1809ef477e51b433ce}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+S\+Y\+S\+T, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a79f22a7e3e5a4637623e953edefe3a10}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3ac053161d05ba5dc180fb4656e9f793f7}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+S\+E\+T} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a5452f653acf6c46cd2dc4e04f4868814}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D33} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D\+V\+D\+D, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a021769ef80b03d4f3f190366fe8d702f}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D12} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D\+C\+O\+R\+E, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a7dcc8589640fefe72b944ca51396f1bf}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R
+ \}
+\begin{DoxyCompactList}\small\item\em Reset causes of the system. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga9888731078b6a27620040360722545c0}{system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source} \{ \hyperlink{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0acfdc6413730c031b29c151e8c5463b65}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+R\+T\+C} = R\+S\+T\+C\+\_\+\+B\+K\+U\+P\+E\+X\+I\+T\+\_\+\+R\+T\+C, 
+\hyperlink{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0a134f7d63753d80404670d3836dbd46fe}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S} = R\+S\+T\+C\+\_\+\+B\+K\+U\+P\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S
+ \}
+\begin{DoxyCompactList}\small\item\em Backup exit source after a backup reset occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{System Initialization}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__system__group_ga43f5e0d6db0fb41a437cc9096b32e9b5}{system\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This driver for Atmel\textregistered{} $\vert$ S\+M\+A\+R\+T A\+R\+M\textregistered{}-\/based microcontrollers provides an interface for the configuration and management of the device's system relation functionality, necessary for the basic device operation. This is not limited to a single peripheral, but extends across multiple hardware peripherals.
+
+The following peripherals are used by this module\+:
+
+The following devices can use this module\+:
+
+The outline of this documentation is as follows\+:
+\begin{DoxyItemize}
+\item \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_prerequisites}{Prerequisites}
+\item \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview}{Module Overview}
+\item \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_special_considerations}{Special Considerations}
+\item \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_extra_info}{Extra Information}
+\item \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_examples}{Examples}
+\item \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_api_overview}{A\+P\+I Overview}
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_prerequisites}{}\subsection{Prerequisites}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_prerequisites}
+There are no prerequisites for this module.\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview}{}\subsection{Module Overview}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview}
+The System driver provides a collection of interfaces between the user application logic, and the core device functionality (such as clocks, reset cause determination, etc.) that is required for all applications. It contains a number of sub-\/modules that control one specific aspect of the device\+:
+
+
+\begin{DoxyItemize}
+\item System Core (this module)
+\item \hyperlink{group__asfdoc__sam0__system__clock__group}{System Clock Control} (sub-\/module)
+\item \hyperlink{group__asfdoc__sam0__system__interrupt__group}{System Interrupt Control} (sub-\/module)
+\item \hyperlink{group__asfdoc__sam0__system__pinmux__group}{System Pin Multiplexer Control} (sub-\/module)
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview_vref}{}\subsubsection{Voltage References}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview_vref}
+The various analog modules within the S\+A\+M devices (such as A\+C, A\+D\+C, and D\+A\+C) require a voltage reference to be configured to act as a reference point for comparisons and conversions.
+
+The S\+A\+M devices contain multiple references, including an internal temperature sensor and a fixed band-\/gap voltage source. When enabled, the associated voltage reference can be selected within the desired peripheral where applicable.\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview_reset_cause}{}\subsubsection{System Reset Cause}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview_reset_cause}
+In some applications there may be a need to execute a different program flow based on how the device was reset. For example, if the cause of reset was the Watchdog timer (W\+D\+T), this might indicate an error in the application, and a form of error handling or error logging might be needed.
+
+For this reason, an A\+P\+I is provided to retrieve the cause of the last system reset, so that appropriate action can be taken.\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview_sleep_mode}{}\subsubsection{Sleep Modes}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview_sleep_mode}
+The S\+A\+M devices have several sleep modes. The sleep mode controls which clock systems on the device will remain enabled or disabled when the device enters a low power sleep mode. \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_sleep_mode_table}{The table below} lists the clock settings of the different sleep modes.
+
+\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_sleep_mode_table}%
+\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_sleep_mode_table}{}%
+\begin{table}[h]\begin{TabularC}{9}
+\hline
+\rowcolor{lightgray}{\bf Sleep mode }&{\bf C\+P\+U clock }&{\bf A\+H\+B clock }&{\bf A\+P\+B clocks }&{\bf Clock sources }&{\bf System clock }&{\bf 32\+K\+Hz }&{\bf Reg mode }&{\bf R\+A\+M mode  }\\\cline{1-9}
+Idle 0 &Stop &Run &Run &Run &Run &Run &Normal &Normal  \\\cline{1-9}
+Idle 1 &Stop &Stop &Run &Run &Run &Run &Normal &Normal  \\\cline{1-9}
+Idle 2 &Stop &Stop &Stop &Run &Run &Run &Normal &Normal  \\\cline{1-9}
+Standby &Stop &Stop &Stop &Stop &Stop &Stop &Low Power &Source/\+Drain biasing  \\\cline{1-9}
+\end{TabularNC}
+\centering
+\caption{S\+A\+M Device Sleep Modes}
+\end{table}
+
+
+Before entering device sleep, one of the available sleep modes must be set. The device will automatically wake up in response to an interrupt being generated or upon any other sleep mode exit condition.
+
+Some peripheral clocks will remain enabled during sleep, depending on their configuration. If desired, the modules can remain clocked during sleep to allow them continue to operate while other parts of the system are powered down to save power.\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_special_considerations}{}\subsection{Special Considerations}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_special_considerations}
+Most of the functions in this driver have device specific restrictions and caveats; refer to your device datasheet.\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_extra_info}{}\subsection{Extra Information}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_extra_info}
+For extra information, see \hyperlink{asfdoc_sam0_system_extra}{Extra Information for S\+Y\+S\+T\+E\+M Driver}. This includes\+:
+\begin{DoxyItemize}
+\item \hyperlink{asfdoc_sam0_system_extra_asfdoc_sam0_system_extra_acronyms}{Acronyms}
+\item \hyperlink{asfdoc_sam0_system_extra_asfdoc_sam0_system_extra_dependencies}{Dependencies}
+\item \hyperlink{asfdoc_sam0_system_extra_asfdoc_sam0_system_extra_errata}{Errata}
+\item \hyperlink{asfdoc_sam0_system_extra_asfdoc_sam0_system_extra_history}{Module History}
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_examples}{}\subsection{Examples}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_examples}
+For S\+Y\+S\+T\+E\+M module related examples, refer to the sub-\/modules listed in the \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview}{Module Overview}.\hypertarget{group__asfdoc__sam0__system__group_asfdoc_sam0_system_api_overview}{}\subsection{A\+P\+I Overview}\label{group__asfdoc__sam0__system__group_asfdoc_sam0_system_api_overview}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__asfdoc__sam0__system__group_ga63d5519343f245cdbf57c247f1b50822}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+backup\+\_\+pin@{system\+\_\+backup\+\_\+pin}}
+\index{system\+\_\+backup\+\_\+pin@{system\+\_\+backup\+\_\+pin}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+backup\+\_\+pin}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+backup\+\_\+pin}}\label{group__asfdoc__sam0__system__group_ga63d5519343f245cdbf57c247f1b50822}
+
+
+Backup I\+O enum. 
+
+List of Backup input and output pins. If enabled (system\+\_\+backup\+\_\+pin\+\_\+output\+\_\+enable), the pins can be driven by the S\+U\+P\+C. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+P\+S\+O\+K@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+P\+S\+O\+K}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+P\+S\+O\+K@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+P\+S\+O\+K}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822a37c45e27e161a1a5df2e345ba3a3167f}{}S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+P\+S\+O\+K\label{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822a37c45e27e161a1a5df2e345ba3a3167f}
+}]Power Supply O\+K status pin \index{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+0}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+0}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa59523841e0d0349470befd4bc1c36a4}{}S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+0\label{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa59523841e0d0349470befd4bc1c36a4}
+}]Backup output pin 0 \index{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+1}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+1@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+1}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa07ecd1efac7cb215843db99ebff443f}{}S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+1\label{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa07ecd1efac7cb215843db99ebff443f}
+}]Backup output pin 1 \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_gab2f5386110553d7c7501d7329a165b91}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+battery\+\_\+power\+\_\+switch@{system\+\_\+battery\+\_\+power\+\_\+switch}}
+\index{system\+\_\+battery\+\_\+power\+\_\+switch@{system\+\_\+battery\+\_\+power\+\_\+switch}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+battery\+\_\+power\+\_\+switch}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+battery\+\_\+power\+\_\+switch}}\label{group__asfdoc__sam0__system__group_gab2f5386110553d7c7501d7329a165b91}
+
+
+Battery power switch configuration enum. 
+
+Enum for Battery power switch modes. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+O\+N\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+O\+N\+E}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+O\+N\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a19d960eac39561f4bf510144b30c17d0}{}S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+O\+N\+E\label{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a19d960eac39561f4bf510144b30c17d0}
+}]The backup domain is always supplied by main power \index{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+C@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+C}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+C@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+C}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91aaa701e5d2c66243ef689e14ef3cf7c7d}{}S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+C\label{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91aaa701e5d2c66243ef689e14ef3cf7c7d}
+}]The power switch is handled by the automatic power switch \index{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+F\+O\+R\+C\+E\+D@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+F\+O\+R\+C\+E\+D}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+F\+O\+R\+C\+E\+D@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+F\+O\+R\+C\+E\+D}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91afff2e8d4e8bb2ca190e43a540bdc7c35}{}S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+F\+O\+R\+C\+E\+D\label{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91afff2e8d4e8bb2ca190e43a540bdc7c35}
+}]The backup domain is always supplied by battery backup power \index{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+B\+O\+D33@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+B\+O\+D33}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+B\+O\+D33@{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+B\+O\+D33}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a0f3607410bf048dbe96724a265b93846}{}S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+B\+O\+D33\label{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a0f3607410bf048dbe96724a265b93846}
+}]The power switch is handled by the B\+O\+D33 \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_gabb931fb8f68c63f6c16e0ba5c3d93897}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+performance\+\_\+level@{system\+\_\+performance\+\_\+level}}
+\index{system\+\_\+performance\+\_\+level@{system\+\_\+performance\+\_\+level}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+performance\+\_\+level}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+performance\+\_\+level}}\label{group__asfdoc__sam0__system__group_gabb931fb8f68c63f6c16e0ba5c3d93897}
+
+
+Performance level. 
+
+List of performance levels. Performance level technique consists of adjusting the regulator output voltage to reduce power consumption. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+0}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+0@{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+0}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a3fc6c9d26dc0afdb2f1202d26a7a142d}{}S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+0\label{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a3fc6c9d26dc0afdb2f1202d26a7a142d}
+}]Performance level 0 \index{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+2}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+2@{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+2}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a8a72bbc163e10dbfb113f77ce599cbce}{}S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+2\label{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a8a72bbc163e10dbfb113f77ce599cbce}
+}]Performance level 2 \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_ga27a2c6a3d0366e83663283710aadd543}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode@{system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode}}
+\index{system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode@{system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode}}\label{group__asfdoc__sam0__system__group_ga27a2c6a3d0366e83663283710aadd543}
+
+
+R\+A\+M Back-\/biasing mode. 
+
+List of R\+A\+M back bias modes. By default, in standby sleep mode, R\+A\+M is in low power mode (back biased) if its power domain is in retention state. This behavior can be changed by configuring the Back Bias bit groups in S\+T\+D\+B\+Y\+C\+F\+G(S\+T\+D\+B\+Y\+C\+F\+G.\+B\+B\+I\+A\+Sxx). \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+R\+E\+T\+E\+N\+T\+I\+O\+N@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+R\+E\+T\+E\+N\+T\+I\+O\+N}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+R\+E\+T\+E\+N\+T\+I\+O\+N@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+R\+E\+T\+E\+N\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a7bcbf5ea037337a5f421c57b05903c45}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+R\+E\+T\+E\+N\+T\+I\+O\+N\label{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a7bcbf5ea037337a5f421c57b05903c45}
+}]Retention Back biasing mode \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543ac9f3ee0336e73d4608ced9558f4abde7}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\label{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543ac9f3ee0336e73d4608ced9558f4abde7}
+}]Standby Back Biasing mode \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+O\+F\+F@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+O\+F\+F}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+O\+F\+F@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+O\+F\+F}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a5650cfc29e1185a89314c178a9836a1e}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+O\+F\+F\label{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a5650cfc29e1185a89314c178a9836a1e}
+}]Standby O\+F\+F mode \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+O\+F\+F@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+O\+F\+F}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+O\+F\+F@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+O\+F\+F}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543aca0a2bd1af74f60fd723bf3362857fb1}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+O\+F\+F\label{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543aca0a2bd1af74f60fd723bf3362857fb1}
+}]Always O\+F\+F mode \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_ga9888731078b6a27620040360722545c0}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source@{system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source}}
+\index{system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source@{system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source}}\label{group__asfdoc__sam0__system__group_ga9888731078b6a27620040360722545c0}
+
+
+Backup exit source after a backup reset occurs. 
+
+List of possible backup exit source. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+R\+T\+C@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+R\+T\+C}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+R\+T\+C@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+R\+T\+C}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0acfdc6413730c031b29c151e8c5463b65}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+R\+T\+C\label{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0acfdc6413730c031b29c151e8c5463b65}
+}]The backup exit source was R\+T\+C interrupt. \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0a134f7d63753d80404670d3836dbd46fe}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S\label{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0a134f7d63753d80404670d3836dbd46fe}
+}]The backup exit source was battery backup power switch \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_gad1757cdfed2f30f012a3aec2e0f67ad3}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+reset\+\_\+cause@{system\+\_\+reset\+\_\+cause}}
+\index{system\+\_\+reset\+\_\+cause@{system\+\_\+reset\+\_\+cause}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+reset\+\_\+cause}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+reset\+\_\+cause}}\label{group__asfdoc__sam0__system__group_gad1757cdfed2f30f012a3aec2e0f67ad3}
+
+
+Reset causes of the system. 
+
+List of possible reset causes of the system. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a43a00fe664fc187f036f5208d550942b}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P\label{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a43a00fe664fc187f036f5208d550942b}
+}]The system was last reset by a backup reset \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a8e5fb81626f25f1809ef477e51b433ce}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\label{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a8e5fb81626f25f1809ef477e51b433ce}
+}]The system was last reset by a software reset \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a79f22a7e3e5a4637623e953edefe3a10}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T\label{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a79f22a7e3e5a4637623e953edefe3a10}
+}]The system was last reset by the watchdog timer \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+S\+E\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+S\+E\+T}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+S\+E\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+S\+E\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3ac053161d05ba5dc180fb4656e9f793f7}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+S\+E\+T\label{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3ac053161d05ba5dc180fb4656e9f793f7}
+}]The system was last reset because the external reset line was pulled low \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D33@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D33}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D33@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D33}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a5452f653acf6c46cd2dc4e04f4868814}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D33\label{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a5452f653acf6c46cd2dc4e04f4868814}
+}]The system was last reset by the B\+O\+D V\+D\+D. \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D12@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D12}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D12@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D12}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a021769ef80b03d4f3f190366fe8d702f}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D12\label{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a021769ef80b03d4f3f190366fe8d702f}
+}]The system was last reset by the B\+O\+D C\+O\+R\+E. \index{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R@{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a7dcc8589640fefe72b944ca51396f1bf}{}S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R\label{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a7dcc8589640fefe72b944ca51396f1bf}
+}]The system was last reset by the P\+O\+R (Power on reset). \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_ga6a75333c00b88a5da14eb9ba5ead2be1}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+sleepmode@{system\+\_\+sleepmode}}
+\index{system\+\_\+sleepmode@{system\+\_\+sleepmode}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+sleepmode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+sleepmode}}\label{group__asfdoc__sam0__system__group_ga6a75333c00b88a5da14eb9ba5ead2be1}
+
+
+Device sleep modes. 
+
+List of available sleep modes in the device. A table of clocks available in different sleep modes can be found in \hyperlink{group__asfdoc__sam0__system__group_asfdoc_sam0_system_module_overview_sleep_mode}{Sleep Modes}. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a32cc6cbf4e09dd7ddb48d85ff68318ff}{}S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E\label{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a32cc6cbf4e09dd7ddb48d85ff68318ff}
+}]I\+D\+L\+E sleep mode \index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a446eddfe38bc09277ed1863ffac261e3}{}S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y\label{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a446eddfe38bc09277ed1863ffac261e3}
+}]S\+T\+A\+N\+D\+B\+Y sleep mode \index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a360b0bad9094c97ac42939b4e9e20558}{}S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P\label{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a360b0bad9094c97ac42939b4e9e20558}
+}]B\+A\+C\+K\+U\+P sleep mode \index{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F@{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a1b54051b5cd49be09cc5d0ef754d3577}{}S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F\label{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a1b54051b5cd49be09cc5d0ef754d3577}
+}]O\+F\+F sleep mode \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_gae3ed274224184cfb1d173b146bd72170}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+voltage\+\_\+reference@{system\+\_\+voltage\+\_\+reference}}
+\index{system\+\_\+voltage\+\_\+reference@{system\+\_\+voltage\+\_\+reference}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+voltage\+\_\+reference}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+voltage\+\_\+reference}}\label{group__asfdoc__sam0__system__group_gae3ed274224184cfb1d173b146bd72170}
+
+
+Voltage reference. 
+
+List of available voltage references (V\+R\+E\+F) that may be used within the device. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+E\+M\+P\+S\+E\+N\+S\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+E\+M\+P\+S\+E\+N\+S\+E}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+E\+M\+P\+S\+E\+N\+S\+E@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+E\+M\+P\+S\+E\+N\+S\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170aec400f1f06b7017c7fdca8e2c8205e36}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+E\+M\+P\+S\+E\+N\+S\+E\label{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170aec400f1f06b7017c7fdca8e2c8205e36}
+}]Temperature sensor voltage reference \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+O\+U\+T\+P\+U\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+O\+U\+T\+P\+U\+T}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+O\+U\+T\+P\+U\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+O\+U\+T\+P\+U\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170ad43a090b917baa0bc23ac3f64d6a4958}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+O\+U\+T\+P\+U\+T\label{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170ad43a090b917baa0bc23ac3f64d6a4958}
+}]Voltage reference output \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_ga05cd664c0c675f440e25980147d01f15}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+voltage\+\_\+references\+\_\+sel@{system\+\_\+voltage\+\_\+references\+\_\+sel}}
+\index{system\+\_\+voltage\+\_\+references\+\_\+sel@{system\+\_\+voltage\+\_\+references\+\_\+sel}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+voltage\+\_\+references\+\_\+sel}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+voltage\+\_\+references\+\_\+sel}}\label{group__asfdoc__sam0__system__group_ga05cd664c0c675f440e25980147d01f15}
+
+
+Voltage reference value. 
+
+Voltage references selection. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V0@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V0}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V0@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V0}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a1e21094a8b6dc3b6736cf41d49f530d2}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V0\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a1e21094a8b6dc3b6736cf41d49f530d2}
+}]1.\+0\+V voltage reference typical value \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V1@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V1}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V1@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V1}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a71b922baf8ccc6a48f5539f256f90524}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V1\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a71b922baf8ccc6a48f5539f256f90524}
+}]1.\+1\+V voltage reference typical value \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V2@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V2}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V2@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V2}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15af9148c9356e4b89f8495cd02b63558f3}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V2\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15af9148c9356e4b89f8495cd02b63558f3}
+}]1.\+2\+V voltage reference typical value \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V25@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V25}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V25@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V25}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15ad836b46f9503e9d134e0cc6cebcb013e}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V25\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15ad836b46f9503e9d134e0cc6cebcb013e}
+}]1.\+25\+V voltage reference typical value \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V0@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V0}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V0@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V0}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a324b9f9e049ccdd46a68efa4dd487898}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V0\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a324b9f9e049ccdd46a68efa4dd487898}
+}]2.\+0\+V voltage reference typical value \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V2@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V2}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V2@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V2}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a3221e830a3effa8556c2bae3ce6daa6c}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V2\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a3221e830a3effa8556c2bae3ce6daa6c}
+}]2.\+2\+V voltage reference typical value \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V4@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V4}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V4@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V4}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a5044713c58324b60a7099a0982b6aee4}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V4\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a5044713c58324b60a7099a0982b6aee4}
+}]2.\+4\+V voltage reference typical value \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V5@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V5}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V5@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V5}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a92eed9eb4ca1bb22b2ed51e5fa04429d}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V5\label{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a92eed9eb4ca1bb22b2ed51e5fa04429d}
+}]2.\+5\+V voltage reference typical value \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_ga07175f24498545cf119e3d514f13e2e7}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency@{system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency}}
+\index{system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency@{system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency}}\label{group__asfdoc__sam0__system__group_ga07175f24498545cf119e3d514f13e2e7}
+
+
+Low power efficiency. 
+
+Low power mode efficiency. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a8cef476457bf84def2af2b9be4cadaee}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T\label{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a8cef476457bf84def2af2b9be4cadaee}
+}]The voltage regulator in Low power mode has the default efficiency and support the whole V\+D\+D range (1.\+62\+V to 3.\+6\+V) \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+H\+I\+G\+H\+T\+E\+S\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+H\+I\+G\+H\+T\+E\+S\+T}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+H\+I\+G\+H\+T\+E\+S\+T@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+H\+I\+G\+H\+T\+E\+S\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a15dd296506e48391c460e19ec6cd782b}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+H\+I\+G\+H\+T\+E\+S\+T\label{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a15dd296506e48391c460e19ec6cd782b}
+}]The voltage regulator in Low power mode has the highest efficiency and support the limited V\+D\+D range (2.\+5\+V to 3.\+6\+V) \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__system__group_ga25dcee48e4c92abeee6351d1bc1b2e42}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+voltage\+\_\+regulator\+\_\+sel@{system\+\_\+voltage\+\_\+regulator\+\_\+sel}}
+\index{system\+\_\+voltage\+\_\+regulator\+\_\+sel@{system\+\_\+voltage\+\_\+regulator\+\_\+sel}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+voltage\+\_\+regulator\+\_\+sel}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf system\+\_\+voltage\+\_\+regulator\+\_\+sel}}\label{group__asfdoc__sam0__system__group_ga25dcee48e4c92abeee6351d1bc1b2e42}
+
+
+Voltage regulator. 
+
+Voltage regulators selection. In active mode, the voltage regulator can be chosen on the fly between a L\+D\+O or a Buck converter. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+D\+O@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+D\+O}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+D\+O@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+D\+O}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a7fbf348d20ce203d62ea66bfed9dad9c}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+D\+O\label{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a7fbf348d20ce203d62ea66bfed9dad9c}
+}]The voltage regulator in active mode is a L\+D\+O voltage regulator \index{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+B\+U\+C\+K@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+B\+U\+C\+K}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+B\+U\+C\+K@{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+B\+U\+C\+K}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a59a0a187cf734783f2cae265c5c61da4}{}S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+B\+U\+C\+K\label{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a59a0a187cf734783f2cae265c5c61da4}
+}]The voltage regulator in active mode is a buck converter \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__asfdoc__sam0__system__group_ga43f5e0d6db0fb41a437cc9096b32e9b5}{}\index{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}!system\+\_\+init@{system\+\_\+init}}
+\index{system\+\_\+init@{system\+\_\+init}!S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver@{S\+A\+M System (\+S\+Y\+S\+T\+E\+M) Driver}}
+\subsubsection[{system\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void system\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__system__group_ga43f5e0d6db0fb41a437cc9096b32e9b5}
+
+
+Initialize system. 
+
+This function will call the various initialization functions within the system namespace. If a given optional system module is not available, the associated call will effectively be a N\+O\+P (No Operation).
+
+Currently the following initialization functions are supported\+:
+\begin{DoxyItemize}
+\item System clock initialization (via the S\+Y\+S\+T\+E\+M C\+L\+O\+C\+K sub-\/module)
+\item Board hardware initialization (via the Board module)
+\item Event system driver initialization (via the E\+V\+S\+Y\+S module)
+\item External Interrupt driver initialization (via the E\+X\+T\+I\+N\+T module) 
+\end{DoxyItemize}

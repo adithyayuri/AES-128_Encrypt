@@ -1,0 +1,85 @@
+\hypertarget{group__group__common__services__delay}{}\section{Busy-\/\+Wait Delay Routines}
+\label{group__group__common__services__delay}\index{Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__group__common__services__delay_gafdccadc6c16847907b3252cdef83e8b0}{delay\+\_\+s}(delay)~((delay) ? \hyperlink{systick__counter_8h_ac16436855dffc7dc7939324a0408adb0}{cpu\+\_\+delay\+\_\+s}(delay) \+: \hyperlink{systick__counter_8h_a25de6f000bcc542a5f3292e369e49681}{cpu\+\_\+delay\+\_\+us}(1))
+\begin{DoxyCompactList}\small\item\em Delay in at least specified number of seconds. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__group__common__services__delay_gad917a5d772ddbd99ad97a1c999ce40d4}{delay\+\_\+ms}(delay)~((delay) ? \hyperlink{systick__counter_8h_acdbe5e2991f2b665ef2babea7b978667}{cpu\+\_\+delay\+\_\+ms}(delay) \+: \hyperlink{systick__counter_8h_a25de6f000bcc542a5f3292e369e49681}{cpu\+\_\+delay\+\_\+us}(1))
+\begin{DoxyCompactList}\small\item\em Delay in at least specified number of milliseconds. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__group__common__services__delay_gaf9a0c0e0f880d818a4c2c3ea9fe8cba1}{delay\+\_\+us}(delay)~((delay) ? \hyperlink{systick__counter_8h_a25de6f000bcc542a5f3292e369e49681}{cpu\+\_\+delay\+\_\+us}(delay) \+: \hyperlink{systick__counter_8h_a25de6f000bcc542a5f3292e369e49681}{cpu\+\_\+delay\+\_\+us}(1))
+\begin{DoxyCompactList}\small\item\em Delay in at least specified number of microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__group__common__services__delay_gaf3c040fe31e69be32855715a75e0cda4}{delay\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the delay driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This module provides simple loop-\/based delay routines for those applications requiring a brief wait during execution. Common for A\+P\+I ver. 2. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__group__common__services__delay_gad917a5d772ddbd99ad97a1c999ce40d4}{}\index{Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}!delay\+\_\+ms@{delay\+\_\+ms}}
+\index{delay\+\_\+ms@{delay\+\_\+ms}!Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}}
+\subsubsection[{delay\+\_\+ms}]{\setlength{\rightskip}{0pt plus 5cm}\#define delay\+\_\+ms(
+\begin{DoxyParamCaption}
+\item[{}]{delay}
+\end{DoxyParamCaption}
+)~((delay) ? {\bf cpu\+\_\+delay\+\_\+ms}(delay) \+: {\bf cpu\+\_\+delay\+\_\+us}(1))}\label{group__group__common__services__delay_gad917a5d772ddbd99ad97a1c999ce40d4}
+
+
+Delay in at least specified number of milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & Delay in milliseconds \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group__common__services__delay_gafdccadc6c16847907b3252cdef83e8b0}{}\index{Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}!delay\+\_\+s@{delay\+\_\+s}}
+\index{delay\+\_\+s@{delay\+\_\+s}!Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}}
+\subsubsection[{delay\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}\#define delay\+\_\+s(
+\begin{DoxyParamCaption}
+\item[{}]{delay}
+\end{DoxyParamCaption}
+)~((delay) ? {\bf cpu\+\_\+delay\+\_\+s}(delay) \+: {\bf cpu\+\_\+delay\+\_\+us}(1))}\label{group__group__common__services__delay_gafdccadc6c16847907b3252cdef83e8b0}
+
+
+Delay in at least specified number of seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & Delay in seconds \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__group__common__services__delay_gaf9a0c0e0f880d818a4c2c3ea9fe8cba1}{}\index{Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}!delay\+\_\+us@{delay\+\_\+us}}
+\index{delay\+\_\+us@{delay\+\_\+us}!Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}}
+\subsubsection[{delay\+\_\+us}]{\setlength{\rightskip}{0pt plus 5cm}\#define delay\+\_\+us(
+\begin{DoxyParamCaption}
+\item[{}]{delay}
+\end{DoxyParamCaption}
+)~((delay) ? {\bf cpu\+\_\+delay\+\_\+us}(delay) \+: {\bf cpu\+\_\+delay\+\_\+us}(1))}\label{group__group__common__services__delay_gaf9a0c0e0f880d818a4c2c3ea9fe8cba1}
+
+
+Delay in at least specified number of microseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & Delay in microseconds \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__group__common__services__delay_gaf3c040fe31e69be32855715a75e0cda4}{}\index{Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}!delay\+\_\+init@{delay\+\_\+init}}
+\index{delay\+\_\+init@{delay\+\_\+init}!Busy-\/\+Wait Delay Routines@{Busy-\/\+Wait Delay Routines}}
+\subsubsection[{delay\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void delay\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group__group__common__services__delay_gaf3c040fe31e69be32855715a75e0cda4}
+
+
+Initialize the delay driver. 
+
+This must be called during start up to initialize the delay routine with the current used main clock. It must run any time the main C\+P\+U clock is changed. 

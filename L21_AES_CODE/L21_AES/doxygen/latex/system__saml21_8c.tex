@@ -1,0 +1,68 @@
+\hypertarget{system__saml21_8c}{}\section{src/\+A\+S\+F/sam0/utils/cmsis/saml21/source/system\+\_\+saml21.c File Reference}
+\label{system__saml21_8c}\index{src/\+A\+S\+F/sam0/utils/cmsis/saml21/source/system\+\_\+saml21.\+c@{src/\+A\+S\+F/sam0/utils/cmsis/saml21/source/system\+\_\+saml21.\+c}}
+
+
+Low-\/level initialization functions called upon chip startup.  
+
+
+{\ttfamily \#include \char`\"{}saml21.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{system__saml21_8c_a16323f44d2b5b11ef3972f71339cbd39}{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K}~(4000000)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{system__saml21_8c_a93f514700ccf00d08dbdcff7f1224eb2}{System\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system. Initialize the System and update the System\+Core\+Clock variable. \end{DoxyCompactList}\item 
+void \hyperlink{system__saml21_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update} (void)
+\begin{DoxyCompactList}\small\item\em Updates the System\+Core\+Clock with current core Clock retrieved from cpu registers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{system__saml21_8c_aa3cd3e43291e81e795d642b79b6088e6}{System\+Core\+Clock} = \hyperlink{system__saml21_8c_a16323f44d2b5b11ef3972f71339cbd39}{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Low-\/level initialization functions called upon chip startup. 
+
+Copyright (c) 2015 Atmel Corporation. All rights reserved.
+
+\subsection{Macro Definition Documentation}
+\hypertarget{system__saml21_8c_a16323f44d2b5b11ef3972f71339cbd39}{}\index{system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}!\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K@{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K}}
+\index{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K@{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K}!system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}}
+\subsubsection[{\+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K~(4000000)}\label{system__saml21_8c_a16323f44d2b5b11ef3972f71339cbd39}
+Initial system clock frequency. The System R\+C Oscillator (R\+C\+S\+Y\+S) provides the source for the main clock at chip startup. 
+
+\subsection{Function Documentation}
+\hypertarget{system__saml21_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}{}\index{system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}!System\+Core\+Clock\+Update@{System\+Core\+Clock\+Update}}
+\index{System\+Core\+Clock\+Update@{System\+Core\+Clock\+Update}!system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}}
+\subsubsection[{System\+Core\+Clock\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void System\+Core\+Clock\+Update (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{system__saml21_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}
+
+
+Updates the System\+Core\+Clock with current core Clock retrieved from cpu registers. 
+
+Update System\+Core\+Clock variable \hypertarget{system__saml21_8c_a93f514700ccf00d08dbdcff7f1224eb2}{}\index{system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}!System\+Init@{System\+Init}}
+\index{System\+Init@{System\+Init}!system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}}
+\subsubsection[{System\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void System\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{system__saml21_8c_a93f514700ccf00d08dbdcff7f1224eb2}
+
+
+Setup the microcontroller system. Initialize the System and update the System\+Core\+Clock variable. 
+
+Initialize the system 
+
+\subsection{Variable Documentation}
+\hypertarget{system__saml21_8c_aa3cd3e43291e81e795d642b79b6088e6}{}\index{system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}!System\+Core\+Clock@{System\+Core\+Clock}}
+\index{System\+Core\+Clock@{System\+Core\+Clock}!system\+\_\+saml21.\+c@{system\+\_\+saml21.\+c}}
+\subsubsection[{System\+Core\+Clock}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t System\+Core\+Clock = {\bf \+\_\+\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K}}\label{system__saml21_8c_aa3cd3e43291e81e795d642b79b6088e6}
+System Clock Frequency (Core Clock) 

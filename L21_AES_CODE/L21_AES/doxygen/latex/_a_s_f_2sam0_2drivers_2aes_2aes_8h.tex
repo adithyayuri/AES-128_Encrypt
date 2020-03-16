@@ -1,0 +1,108 @@
+\hypertarget{_a_s_f_2sam0_2drivers_2aes_2aes_8h}{}\section{src/\+A\+S\+F/sam0/drivers/aes/aes.h File Reference}
+\label{_a_s_f_2sam0_2drivers_2aes_2aes_8h}\index{src/\+A\+S\+F/sam0/drivers/aes/aes.\+h@{src/\+A\+S\+F/sam0/drivers/aes/aes.\+h}}
+
+
+S\+A\+M Advanced Encryption Standard driver.  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\\*
+{\ttfamily \#include $<$system.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structaes__config}{aes\+\_\+config}
+\item 
+struct \hyperlink{structaes__module}{aes\+\_\+module}
+\begin{DoxyCompactList}\small\item\em Device structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{Indent}{\bf Module Status Flags}\par
+{\em A\+E\+S status flags, returned by aes\+\_\+get\+\_\+status() and cleared by aes\+\_\+clear\+\_\+status(). }\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga4bede6c9fbc7ad0a60b8a0f72e07b45e}{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}~(1\+U\+L $<$$<$ 0)
+\item 
+\#define \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae9507d6496a34ddfec7d0aedec331129}{A\+E\+S\+\_\+\+G\+F\+\_\+\+M\+U\+L\+T\+I\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}~(1\+U\+L $<$$<$ 1)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_gabe2a28b24899440126081426bc669f7d}{aes\+\_\+encrypt\+\_\+mode} \{ \hyperlink{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da39be77f9136f99d5490b45e052107f64}{A\+E\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+I\+O\+N} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_ggabe2a28b24899440126081426bc669f7da4656e8bd59bf198b469865b3032d0ca5}{A\+E\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga49472bbd482a7e8ed4664a46b0e6f2d2}{aes\+\_\+key\+\_\+size} \{ \hyperlink{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2ad587af70a08182d1457b0f10c3ca3199}{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+128} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a527fc70da90fc323fb169fcac00eb9e5}{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+192}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga49472bbd482a7e8ed4664a46b0e6f2d2a88a196fd9f1eeda1c4010e4c9879922d}{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\+\_\+256}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga861bf22e2def6a1f86927b08cd59ee95}{aes\+\_\+start\+\_\+mode} \{ \hyperlink{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a823d8cd15aab6c2da258376ef4d623a3}{A\+E\+S\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+\+S\+T\+A\+R\+T} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga861bf22e2def6a1f86927b08cd59ee95a3c5507b6985fd69034fa308789561d74}{A\+E\+S\+\_\+\+A\+U\+T\+O\+\_\+\+S\+T\+A\+R\+T}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga56801d2411b3531545ac95a53665e14f}{aes\+\_\+operation\+\_\+mode} \{ \\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fae1d5433a7ae5b24f27bf1f353d91b807}{A\+E\+S\+\_\+\+E\+C\+B\+\_\+\+M\+O\+D\+E} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa3ef11f785546b23b897a3246d41228b7}{A\+E\+S\+\_\+\+C\+B\+C\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa5a97b189bd808b16bf29691a2d50bb10}{A\+E\+S\+\_\+\+O\+F\+B\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa2aef31f271c03e41a6c2a405c3ce1015}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+M\+O\+D\+E}, 
+\\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fad9d8be8e95b211b7b01085c62d85ff6a}{A\+E\+S\+\_\+\+C\+T\+R\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14faa1bdaec7dbc85a717b83580b3a7da3f0}{A\+E\+S\+\_\+\+C\+C\+M\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga56801d2411b3531545ac95a53665e14fa1edcb748b10aea06537f5bf412111139}{A\+E\+S\+\_\+\+G\+C\+M\+\_\+\+M\+O\+D\+E}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga46fc609ea150fb0ad47d8dcc321b9928}{aes\+\_\+cfb\+\_\+size} \{ \\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a6ba2b35e519e31d26893d1793cc17164}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+128} = 0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a17b6d2de759bec7258b958f745cfcca4}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+64}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928af1c7b3a8a35e64482a98f007391b079d}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+32}, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928a116cc5d89f1df87432af7d6cef5d73bc}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+16}, 
+\\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga46fc609ea150fb0ad47d8dcc321b9928add9e8323423b921691e370a884848baa}{A\+E\+S\+\_\+\+C\+F\+B\+\_\+\+S\+I\+Z\+E\+\_\+8}
+ \}
+\item 
+enum \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga1e219f13a55ca81c4ef0576d4993d29f}{aes\+\_\+countermeature\+\_\+type} \{ \\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa61c0c057ad9bcb9a0c5a10a5facb03f9}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+disabled} = 0x0, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa23893a34d3b84cff04efd24cf74dec67}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+1} = 0x01, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa572dab25430fce4139f3ae1704d2f85e}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+2} = 0x02, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa99f06dd7eab2949eda7b725430d3abef}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+3} = 0x04, 
+\\*
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29faee42a8c13c82564d674b1d8a8d017691}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+4} = 0x08, 
+\hyperlink{group__asfdoc__sam0__drivers__aes__group_gga1e219f13a55ca81c4ef0576d4993d29fa3344d51b5dc79729c03c84a9aa66824a}{A\+E\+S\+\_\+\+C\+O\+U\+N\+T\+E\+R\+M\+E\+A\+S\+U\+R\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L} = 0x0\+F
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf Configuration and Initialization}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gad56da9d3959afcfe36876b183e5bf5ff}{aes\+\_\+get\+\_\+config\+\_\+defaults} (struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Initializes an A\+E\+S configuration structure to defaults. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga803e7c113963451642ecd4f7c476bf9b}{aes\+\_\+set\+\_\+config} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, \hyperlink{struct_aes}{Aes} $\ast$const hw, struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae8460e5d2f7cbf1cce23fd0125f2ed38}{aes\+\_\+init} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, \hyperlink{struct_aes}{Aes} $\ast$const hw, struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Initialize the A\+E\+S module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Start, Enable, and Write}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae41549e7221a99c62f673c65e2f5ff03}{aes\+\_\+enable} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module)
+\begin{DoxyCompactList}\small\item\em Enable the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gab08f123acee91e3544140b8c6df7b623}{aes\+\_\+disable} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module)
+\begin{DoxyCompactList}\small\item\em Disable the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga736388ff9633a0549299a5e16e048f57}{aes\+\_\+write\+\_\+key} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$key)
+\begin{DoxyCompactList}\small\item\em Write the 128/192/256-\/bit cryptographic key. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga0060dabc9035de262a49d8341079f344}{aes\+\_\+write\+\_\+init\+\_\+vector} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$vector)
+\begin{DoxyCompactList}\small\item\em Write the initialization vector (for the C\+B\+C, C\+F\+B, O\+F\+B, C\+T\+R, and G\+C\+M cipher modes). \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga451967d8225c0d3632d4ebea8d9667ee}{aes\+\_\+write\+\_\+input\+\_\+data} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$p\+\_\+input\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Write the input data (four consecutive 32-\/bit words). \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga7fcad6bd802773d1f2532d4dce46c007}{aes\+\_\+read\+\_\+output\+\_\+data} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, uint32\+\_\+t $\ast$p\+\_\+output\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Read the output data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Status Management}\par
+\end{Indent}
+\begin{Indent}{\bf Galois Counter Mode}\par
+\end{Indent}
+
+
+\subsection{Detailed Description}
+S\+A\+M Advanced Encryption Standard driver. 
+
+Copyright (c) 2014-\/2015 Atmel Corporation. All rights reserved.

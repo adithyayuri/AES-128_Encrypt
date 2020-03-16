@@ -1,0 +1,57 @@
+\hypertarget{systick__counter_8c}{}\section{src/\+A\+S\+F/common2/services/delay/sam0/systick\+\_\+counter.c File Reference}
+\label{systick__counter_8c}\index{src/\+A\+S\+F/common2/services/delay/sam0/systick\+\_\+counter.\+c@{src/\+A\+S\+F/common2/services/delay/sam0/systick\+\_\+counter.\+c}}
+
+
+A\+R\+M functions for busy-\/wait delay loops.  
+
+
+{\ttfamily \#include \char`\"{}delay.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__group__common__services__delay_gaf3c040fe31e69be32855715a75e0cda4}{delay\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the delay driver. \end{DoxyCompactList}\item 
+void \hyperlink{systick__counter_8c_adb03c5e0f32376f37dfb254560903146}{delay\+\_\+cycles\+\_\+us} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Delay loop to delay at least n number of microseconds. \end{DoxyCompactList}\item 
+void \hyperlink{systick__counter_8c_ad13dc67d9f0bdb8971855e4e0cb0e405}{delay\+\_\+cycles\+\_\+ms} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Delay loop to delay at least n number of milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+R\+M functions for busy-\/wait delay loops. 
+
+Copyright (c) 2014-\/2015 Atmel Corporation. All rights reserved.
+
+\subsection{Function Documentation}
+\hypertarget{systick__counter_8c_ad13dc67d9f0bdb8971855e4e0cb0e405}{}\index{systick\+\_\+counter.\+c@{systick\+\_\+counter.\+c}!delay\+\_\+cycles\+\_\+ms@{delay\+\_\+cycles\+\_\+ms}}
+\index{delay\+\_\+cycles\+\_\+ms@{delay\+\_\+cycles\+\_\+ms}!systick\+\_\+counter.\+c@{systick\+\_\+counter.\+c}}
+\subsubsection[{delay\+\_\+cycles\+\_\+ms}]{\setlength{\rightskip}{0pt plus 5cm}void delay\+\_\+cycles\+\_\+ms (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\label{systick__counter_8c_ad13dc67d9f0bdb8971855e4e0cb0e405}
+
+
+Delay loop to delay at least n number of milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of milliseconds to wait \\
+\hline
+\end{DoxyParams}
+\hypertarget{systick__counter_8c_adb03c5e0f32376f37dfb254560903146}{}\index{systick\+\_\+counter.\+c@{systick\+\_\+counter.\+c}!delay\+\_\+cycles\+\_\+us@{delay\+\_\+cycles\+\_\+us}}
+\index{delay\+\_\+cycles\+\_\+us@{delay\+\_\+cycles\+\_\+us}!systick\+\_\+counter.\+c@{systick\+\_\+counter.\+c}}
+\subsubsection[{delay\+\_\+cycles\+\_\+us}]{\setlength{\rightskip}{0pt plus 5cm}void delay\+\_\+cycles\+\_\+us (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)}\label{systick__counter_8c_adb03c5e0f32376f37dfb254560903146}
+
+
+Delay loop to delay at least n number of microseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of microseconds to wait \\
+\hline
+\end{DoxyParams}

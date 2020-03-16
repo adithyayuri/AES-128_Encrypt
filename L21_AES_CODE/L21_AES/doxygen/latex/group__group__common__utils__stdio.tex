@@ -1,0 +1,37 @@
+\hypertarget{group__group__common__utils__stdio}{}\section{Standard I/\+O (stdio)}
+\label{group__group__common__utils__stdio}\index{Standard I/\+O (stdio)@{Standard I/\+O (stdio)}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__group__common__utils__stdio__stdio__serial}{Standard serial I/\+O (stdio)}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile void $\ast$volatile \hyperlink{group__group__common__utils__stdio_gad4163ee0eaa09db3b42c367fd768e737}{stdio\+\_\+base}
+\item 
+void($\ast$ \hyperlink{group__group__common__utils__stdio_ga7332be07af3c0ab09d41a9b0b97efbe8}{ptr\+\_\+get} )(void volatile $\ast$, char $\ast$)
+\item 
+volatile void $\ast$volatile \hyperlink{group__group__common__utils__stdio_gad4163ee0eaa09db3b42c367fd768e737}{stdio\+\_\+base}
+\item 
+int($\ast$ \hyperlink{group__group__common__utils__stdio_gab88750c764f1e24b95134201373aba70}{ptr\+\_\+put} )(void volatile $\ast$, char)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common standard I/\+O driver that implements the stdio read and write functions on A\+V\+R and S\+A\+M devices. 
+
+\subsection{Variable Documentation}
+\hypertarget{group__group__common__utils__stdio_ga7332be07af3c0ab09d41a9b0b97efbe8}{}\index{Standard I/\+O (stdio)@{Standard I/\+O (stdio)}!ptr\+\_\+get@{ptr\+\_\+get}}
+\index{ptr\+\_\+get@{ptr\+\_\+get}!Standard I/\+O (stdio)@{Standard I/\+O (stdio)}}
+\subsubsection[{ptr\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ ptr\+\_\+get) (void volatile $\ast$, char $\ast$)}\label{group__group__common__utils__stdio_ga7332be07af3c0ab09d41a9b0b97efbe8}
+Pointer to the external low level read function. \hypertarget{group__group__common__utils__stdio_gab88750c764f1e24b95134201373aba70}{}\index{Standard I/\+O (stdio)@{Standard I/\+O (stdio)}!ptr\+\_\+put@{ptr\+\_\+put}}
+\index{ptr\+\_\+put@{ptr\+\_\+put}!Standard I/\+O (stdio)@{Standard I/\+O (stdio)}}
+\subsubsection[{ptr\+\_\+put}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ ptr\+\_\+put) (void volatile $\ast$, char)}\label{group__group__common__utils__stdio_gab88750c764f1e24b95134201373aba70}
+Pointer to the external low level write function. \hypertarget{group__group__common__utils__stdio_gad4163ee0eaa09db3b42c367fd768e737}{}\index{Standard I/\+O (stdio)@{Standard I/\+O (stdio)}!stdio\+\_\+base@{stdio\+\_\+base}}
+\index{stdio\+\_\+base@{stdio\+\_\+base}!Standard I/\+O (stdio)@{Standard I/\+O (stdio)}}
+\subsubsection[{stdio\+\_\+base}]{\setlength{\rightskip}{0pt plus 5cm}volatile void$\ast$ volatile stdio\+\_\+base}\label{group__group__common__utils__stdio_gad4163ee0eaa09db3b42c367fd768e737}
+Pointer to the base of the U\+S\+A\+R\+T module instance to use for stdio. \hypertarget{group__group__common__utils__stdio_gad4163ee0eaa09db3b42c367fd768e737}{}\index{Standard I/\+O (stdio)@{Standard I/\+O (stdio)}!stdio\+\_\+base@{stdio\+\_\+base}}
+\index{stdio\+\_\+base@{stdio\+\_\+base}!Standard I/\+O (stdio)@{Standard I/\+O (stdio)}}
+\subsubsection[{stdio\+\_\+base}]{\setlength{\rightskip}{0pt plus 5cm}volatile void$\ast$ volatile stdio\+\_\+base}\label{group__group__common__utils__stdio_gad4163ee0eaa09db3b42c367fd768e737}
+Pointer to the base of the U\+S\+A\+R\+T module instance to use for stdio. 

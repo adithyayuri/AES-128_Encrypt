@@ -1,0 +1,46 @@
+\hypertarget{drivers_2port_2port_8h}{}\section{src/\+A\+S\+F/sam0/drivers/port/port.h File Reference}
+\label{drivers_2port_2port_8h}\index{src/\+A\+S\+F/sam0/drivers/port/port.\+h@{src/\+A\+S\+F/sam0/drivers/port/port.\+h}}
+
+
+S\+A\+M G\+P\+I\+O \hyperlink{struct_port}{Port} Driver.  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\\*
+{\ttfamily \#include $<$pinmux.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structport__config}{port\+\_\+config}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_port}{Port} pin configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__port__group_gabe12893c067f9b011ece79c1bf1b128a}{port\+\_\+pin\+\_\+dir} \{ \hyperlink{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aacfdf36142de0378cd9927b9c00e2f7a6}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T, 
+\hyperlink{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aaa2cda8b4095bfaf6f354f113947a3463}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T, 
+\hyperlink{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aae3d3fdfe355c7727ea36948da3b848ad}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+I\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K
+ \}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_port}{Port} pin direction configuration enum. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__port__group_ga1f47828261f5b7ac5f864b42981a2004}{port\+\_\+pin\+\_\+pull} \{ \hyperlink{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004ab178b34fb381794e7f550b14ff08a302}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E, 
+\hyperlink{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a6505b9a836a818d1f2c8a248b9ac8073}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P, 
+\hyperlink{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a2665866a5f05266cc8fa78da60ebc19d}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N
+ \}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_port}{Port} pin input pull configuration enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}{\bf State Reading/\+Writing (Physical Group Orientated)}\par
+\end{Indent}
+\begin{Indent}{\bf Configuration and Initialization}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__port__group_gad21f235037f2d75ee3e7c08ba8b239c5}{port\+\_\+pin\+\_\+set\+\_\+config} (const uint8\+\_\+t gpio\+\_\+pin, const struct \hyperlink{structport__config}{port\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{struct_port}{Port} pin configuration to the hardware module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__port__group_ga7b832928bee6911ac7c9f18df8a5cf4a}{port\+\_\+group\+\_\+set\+\_\+config} (\hyperlink{struct_port_group}{Port\+Group} $\ast$const port, const uint32\+\_\+t mask, const struct \hyperlink{structport__config}{port\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{struct_port}{Port} group configuration group to the hardware module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf State Reading/\+Writing (Logical Pin Orientated)}\par
+\end{Indent}
+
+
+\subsection{Detailed Description}
+S\+A\+M G\+P\+I\+O \hyperlink{struct_port}{Port} Driver. 
+
+Copyright (C) 2012-\/2016 Atmel Corporation. All rights reserved.

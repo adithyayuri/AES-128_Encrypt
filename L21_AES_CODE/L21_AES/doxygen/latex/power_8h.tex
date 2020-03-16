@@ -1,0 +1,80 @@
+\hypertarget{power_8h}{}\section{src/\+A\+S\+F/sam0/drivers/system/power/power\+\_\+sam\+\_\+l/power.h File Reference}
+\label{power_8h}\index{src/\+A\+S\+F/sam0/drivers/system/power/power\+\_\+sam\+\_\+l/power.\+h@{src/\+A\+S\+F/sam0/drivers/system/power/power\+\_\+sam\+\_\+l/power.\+h}}
+
+
+S\+A\+M L21/\+L22/\+R30 Power functionality.  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\\*
+{\ttfamily \#include $<$clock.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsystem__standby__config}{system\+\_\+standby\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Standby configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structsystem__voltage__regulator__config}{system\+\_\+voltage\+\_\+regulator\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Voltage Regulator System (V\+R\+E\+G) Control configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structsystem__voltage__references__config}{system\+\_\+voltage\+\_\+references\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Voltage References System (V\+R\+E\+F) Control configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structsystem__battery__backup__power__switch__config}{system\+\_\+battery\+\_\+backup\+\_\+power\+\_\+switch\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Battery Backup Power Switch (B\+B\+P\+S) Control configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga6a75333c00b88a5da14eb9ba5ead2be1}{system\+\_\+sleepmode} \{ \hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a32cc6cbf4e09dd7ddb48d85ff68318ff}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+I\+D\+L\+E} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E(0x2), 
+\hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a446eddfe38bc09277ed1863ffac261e3}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+B\+Y, 
+\hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a360b0bad9094c97ac42939b4e9e20558}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+B\+A\+C\+K\+U\+P, 
+\hyperlink{group__asfdoc__sam0__system__group_gga6a75333c00b88a5da14eb9ba5ead2be1a1b54051b5cd49be09cc5d0ef754d3577}{S\+Y\+S\+T\+E\+M\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F} = P\+M\+\_\+\+S\+L\+E\+E\+P\+C\+F\+G\+\_\+\+S\+L\+E\+E\+P\+M\+O\+D\+E\+\_\+\+O\+F\+F
+ \}
+\begin{DoxyCompactList}\small\item\em Device sleep modes. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gabb931fb8f68c63f6c16e0ba5c3d93897}{system\+\_\+performance\+\_\+level} \{ \hyperlink{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a3fc6c9d26dc0afdb2f1202d26a7a142d}{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+0} = P\+M\+\_\+\+P\+L\+C\+F\+G\+\_\+\+P\+L\+S\+E\+L\+\_\+\+P\+L0, 
+\hyperlink{group__asfdoc__sam0__system__group_ggabb931fb8f68c63f6c16e0ba5c3d93897a8a72bbc163e10dbfb113f77ce599cbce}{S\+Y\+S\+T\+E\+M\+\_\+\+P\+E\+R\+F\+O\+R\+M\+A\+N\+C\+E\+\_\+\+L\+E\+V\+E\+L\+\_\+2} = P\+M\+\_\+\+P\+L\+C\+F\+G\+\_\+\+P\+L\+S\+E\+L\+\_\+\+P\+L2
+ \}
+\begin{DoxyCompactList}\small\item\em Performance level. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga27a2c6a3d0366e83663283710aadd543}{system\+\_\+ram\+\_\+back\+\_\+bias\+\_\+mode} \{ \hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a7bcbf5ea037337a5f421c57b05903c45}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+R\+E\+T\+E\+N\+T\+I\+O\+N} = 0, 
+\hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543ac9f3ee0336e73d4608ced9558f4abde7}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y}, 
+\hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543a5650cfc29e1185a89314c178a9836a1e}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+O\+F\+F}, 
+\hyperlink{group__asfdoc__sam0__system__group_gga27a2c6a3d0366e83663283710aadd543aca0a2bd1af74f60fd723bf3362857fb1}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+A\+M\+\_\+\+B\+A\+C\+K\+\_\+\+B\+I\+A\+S\+\_\+\+O\+F\+F}
+ \}
+\begin{DoxyCompactList}\small\item\em R\+A\+M Back-\/biasing mode. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga25dcee48e4c92abeee6351d1bc1b2e42}{system\+\_\+voltage\+\_\+regulator\+\_\+sel} \{ \hyperlink{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a7fbf348d20ce203d62ea66bfed9dad9c}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+D\+O} = S\+U\+P\+C\+\_\+\+V\+R\+E\+G\+\_\+\+S\+E\+L\+\_\+\+L\+D\+O\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga25dcee48e4c92abeee6351d1bc1b2e42a59a0a187cf734783f2cae265c5c61da4}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+B\+U\+C\+K} = S\+U\+P\+C\+\_\+\+V\+R\+E\+G\+\_\+\+S\+E\+L\+\_\+\+B\+U\+C\+K\+\_\+\+Val
+ \}
+\begin{DoxyCompactList}\small\item\em Voltage regulator. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga07175f24498545cf119e3d514f13e2e7}{system\+\_\+voltage\+\_\+regulator\+\_\+low\+\_\+power\+\_\+efficiency} \{ \hyperlink{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a8cef476457bf84def2af2b9be4cadaee}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+D\+E\+F\+A\+U\+L\+T}, 
+\hyperlink{group__asfdoc__sam0__system__group_gga07175f24498545cf119e3d514f13e2e7a15dd296506e48391c460e19ec6cd782b}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+G\+U\+L\+A\+T\+O\+R\+\_\+\+L\+O\+W\+\_\+\+P\+O\+W\+E\+R\+\_\+\+E\+F\+F\+I\+C\+I\+E\+N\+C\+Y\+\_\+\+H\+I\+G\+H\+T\+E\+S\+T}
+ \}
+\begin{DoxyCompactList}\small\item\em Low power efficiency. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga05cd664c0c675f440e25980147d01f15}{system\+\_\+voltage\+\_\+references\+\_\+sel} \{ \\*
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a1e21094a8b6dc3b6736cf41d49f530d2}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V0} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V0\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a71b922baf8ccc6a48f5539f256f90524}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V1} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V1\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15af9148c9356e4b89f8495cd02b63558f3}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V2} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V2\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15ad836b46f9503e9d134e0cc6cebcb013e}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+1\+V25} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+1\+V25\+\_\+\+Val, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a324b9f9e049ccdd46a68efa4dd487898}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V0} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V0\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a3221e830a3effa8556c2bae3ce6daa6c}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V2} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V2\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a5044713c58324b60a7099a0982b6aee4}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V4} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V4\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_gga05cd664c0c675f440e25980147d01f15a92eed9eb4ca1bb22b2ed51e5fa04429d}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+2\+V5} = S\+U\+P\+C\+\_\+\+V\+R\+E\+F\+\_\+\+S\+E\+L\+\_\+2\+V5\+\_\+\+Val
+ \}
+\begin{DoxyCompactList}\small\item\em Voltage reference value. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gab2f5386110553d7c7501d7329a165b91}{system\+\_\+battery\+\_\+power\+\_\+switch} \{ \hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a19d960eac39561f4bf510144b30c17d0}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+O\+N\+E} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+N\+O\+N\+E\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91aaa701e5d2c66243ef689e14ef3cf7c7d}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+A\+U\+T\+O\+M\+A\+T\+I\+C} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+A\+P\+W\+S\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91afff2e8d4e8bb2ca190e43a540bdc7c35}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+F\+O\+R\+C\+E\+D} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+Val, 
+\hyperlink{group__asfdoc__sam0__system__group_ggab2f5386110553d7c7501d7329a165b91a0f3607410bf048dbe96724a265b93846}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+P\+O\+W\+E\+R\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+B\+O\+D33} = S\+U\+P\+C\+\_\+\+B\+B\+P\+S\+\_\+\+C\+O\+N\+F\+\_\+\+B\+O\+D33\+\_\+\+Val
+ \}
+\begin{DoxyCompactList}\small\item\em Battery power switch configuration enum. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gae3ed274224184cfb1d173b146bd72170}{system\+\_\+voltage\+\_\+reference} \{ \hyperlink{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170aec400f1f06b7017c7fdca8e2c8205e36}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+E\+M\+P\+S\+E\+N\+S\+E}, 
+\hyperlink{group__asfdoc__sam0__system__group_ggae3ed274224184cfb1d173b146bd72170ad43a090b917baa0bc23ac3f64d6a4958}{S\+Y\+S\+T\+E\+M\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+O\+U\+T\+P\+U\+T}
+ \}
+\begin{DoxyCompactList}\small\item\em Voltage reference. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga63d5519343f245cdbf57c247f1b50822}{system\+\_\+backup\+\_\+pin} \{ \hyperlink{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822a37c45e27e161a1a5df2e345ba3a3167f}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+P\+S\+O\+K} = (0x1 $<$$<$ 0), 
+\hyperlink{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa59523841e0d0349470befd4bc1c36a4}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+0} = (0x1 $<$$<$ 1), 
+\hyperlink{group__asfdoc__sam0__system__group_gga63d5519343f245cdbf57c247f1b50822aa07ecd1efac7cb215843db99ebff443f}{S\+Y\+S\+T\+E\+M\+\_\+\+B\+A\+C\+K\+U\+P\+\_\+\+P\+I\+N\+\_\+\+O\+U\+T\+\_\+1} = (0x1 $<$$<$ 2)
+ \}
+\begin{DoxyCompactList}\small\item\em Backup I\+O enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+A\+M L21/\+L22/\+R30 Power functionality. 
+
+Copyright (C) 2014-\/2016 Atmel Corporation. All rights reserved.

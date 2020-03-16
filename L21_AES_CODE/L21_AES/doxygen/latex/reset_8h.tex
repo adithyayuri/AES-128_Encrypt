@@ -1,0 +1,33 @@
+\hypertarget{reset_8h}{}\section{src/\+A\+S\+F/sam0/drivers/system/reset/reset\+\_\+sam\+\_\+l/reset.h File Reference}
+\label{reset_8h}\index{src/\+A\+S\+F/sam0/drivers/system/reset/reset\+\_\+sam\+\_\+l/reset.\+h@{src/\+A\+S\+F/sam0/drivers/system/reset/reset\+\_\+sam\+\_\+l/reset.\+h}}
+
+
+S\+A\+M Reset functionality.  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\\*
+{\ttfamily \#include $<$clock.\+h$>$}\\*
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_gad1757cdfed2f30f012a3aec2e0f67ad3}{system\+\_\+reset\+\_\+cause} \{ \\*
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a43a00fe664fc187f036f5208d550942b}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+B\+A\+C\+K\+U\+P, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a8e5fb81626f25f1809ef477e51b433ce}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+S\+Y\+S\+T, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a79f22a7e3e5a4637623e953edefe3a10}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+W\+D\+T, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3ac053161d05ba5dc180fb4656e9f793f7}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+R\+E\+S\+E\+T} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+E\+X\+T, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a5452f653acf6c46cd2dc4e04f4868814}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D33} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D\+V\+D\+D, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a021769ef80b03d4f3f190366fe8d702f}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D12} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+B\+O\+D\+C\+O\+R\+E, 
+\hyperlink{group__asfdoc__sam0__system__group_ggad1757cdfed2f30f012a3aec2e0f67ad3a7dcc8589640fefe72b944ca51396f1bf}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R} = R\+S\+T\+C\+\_\+\+R\+C\+A\+U\+S\+E\+\_\+\+P\+O\+R
+ \}
+\begin{DoxyCompactList}\small\item\em Reset causes of the system. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__system__group_ga9888731078b6a27620040360722545c0}{system\+\_\+reset\+\_\+backup\+\_\+exit\+\_\+source} \{ \hyperlink{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0acfdc6413730c031b29c151e8c5463b65}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+R\+T\+C} = R\+S\+T\+C\+\_\+\+B\+K\+U\+P\+E\+X\+I\+T\+\_\+\+R\+T\+C, 
+\hyperlink{group__asfdoc__sam0__system__group_gga9888731078b6a27620040360722545c0a134f7d63753d80404670d3836dbd46fe}{S\+Y\+S\+T\+E\+M\+\_\+\+R\+E\+S\+E\+T\+\_\+\+B\+A\+C\+K\+K\+U\+P\+\_\+\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S} = R\+S\+T\+C\+\_\+\+B\+K\+U\+P\+E\+X\+I\+T\+\_\+\+B\+B\+P\+S
+ \}
+\begin{DoxyCompactList}\small\item\em Backup exit source after a backup reset occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+A\+M Reset functionality. 
+
+Copyright (C) 2014-\/2016 Atmel Corporation. All rights reserved.

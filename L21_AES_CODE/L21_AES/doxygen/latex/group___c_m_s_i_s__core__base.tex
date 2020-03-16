@@ -1,0 +1,54 @@
+\hypertarget{group___c_m_s_i_s__core__base}{}\section{Core Definitions}
+\label{group___c_m_s_i_s__core__base}\index{Core Definitions@{Core Definitions}}
+
+
+Definitions for base addresses, unions, and structures.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___c_m_s_i_s__core__base_ga3c14ed93192c8d9143322bbf77ebf770}{S\+C\+S\+\_\+\+B\+A\+S\+E}~(0x\+E000\+E000\+U\+L)
+\item 
+\#define \hyperlink{group___c_m_s_i_s__core__base_ga58effaac0b93006b756d33209e814646}{Sys\+Tick\+\_\+\+B\+A\+S\+E}~(\hyperlink{group___c_m_s_i_s__core__base_ga3c14ed93192c8d9143322bbf77ebf770}{S\+C\+S\+\_\+\+B\+A\+S\+E} +  0x0010\+U\+L)
+\item 
+\#define \hyperlink{group___c_m_s_i_s__core__base_gaa0288691785a5f868238e0468b39523d}{N\+V\+I\+C\+\_\+\+B\+A\+S\+E}~(\hyperlink{group___c_m_s_i_s__core__base_ga3c14ed93192c8d9143322bbf77ebf770}{S\+C\+S\+\_\+\+B\+A\+S\+E} +  0x0100\+U\+L)
+\item 
+\#define \hyperlink{group___c_m_s_i_s__core__base_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}{S\+C\+B\+\_\+\+B\+A\+S\+E}~(\hyperlink{group___c_m_s_i_s__core__base_ga3c14ed93192c8d9143322bbf77ebf770}{S\+C\+S\+\_\+\+B\+A\+S\+E} +  0x0\+D00\+U\+L)
+\item 
+\#define \hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{S\+C\+B}~((\hyperlink{struct_s_c_b___type}{S\+C\+B\+\_\+\+Type}       $\ast$)     \hyperlink{group___c_m_s_i_s__core__base_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}{S\+C\+B\+\_\+\+B\+A\+S\+E}      )
+\item 
+\#define \hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{Sys\+Tick}~((\hyperlink{struct_sys_tick___type}{Sys\+Tick\+\_\+\+Type}   $\ast$)     \hyperlink{group___c_m_s_i_s__core__base_ga58effaac0b93006b756d33209e814646}{Sys\+Tick\+\_\+\+B\+A\+S\+E}  )
+\item 
+\#define \hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{N\+V\+I\+C}~((\hyperlink{struct_n_v_i_c___type}{N\+V\+I\+C\+\_\+\+Type}      $\ast$)     \hyperlink{group___c_m_s_i_s__core__base_gaa0288691785a5f868238e0468b39523d}{N\+V\+I\+C\+\_\+\+B\+A\+S\+E}     )
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions for base addresses, unions, and structures. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{}\index{Core Definitions@{Core Definitions}!N\+V\+I\+C@{N\+V\+I\+C}}
+\index{N\+V\+I\+C@{N\+V\+I\+C}!Core Definitions@{Core Definitions}}
+\subsubsection[{N\+V\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+V\+I\+C~(({\bf N\+V\+I\+C\+\_\+\+Type}      $\ast$)     {\bf N\+V\+I\+C\+\_\+\+B\+A\+S\+E}     )}\label{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}
+N\+V\+I\+C configuration struct \hypertarget{group___c_m_s_i_s__core__base_gaa0288691785a5f868238e0468b39523d}{}\index{Core Definitions@{Core Definitions}!N\+V\+I\+C\+\_\+\+B\+A\+S\+E@{N\+V\+I\+C\+\_\+\+B\+A\+S\+E}}
+\index{N\+V\+I\+C\+\_\+\+B\+A\+S\+E@{N\+V\+I\+C\+\_\+\+B\+A\+S\+E}!Core Definitions@{Core Definitions}}
+\subsubsection[{N\+V\+I\+C\+\_\+\+B\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+V\+I\+C\+\_\+\+B\+A\+S\+E~({\bf S\+C\+S\+\_\+\+B\+A\+S\+E} +  0x0100\+U\+L)}\label{group___c_m_s_i_s__core__base_gaa0288691785a5f868238e0468b39523d}
+N\+V\+I\+C Base Address \hypertarget{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{}\index{Core Definitions@{Core Definitions}!S\+C\+B@{S\+C\+B}}
+\index{S\+C\+B@{S\+C\+B}!Core Definitions@{Core Definitions}}
+\subsubsection[{S\+C\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+B~(({\bf S\+C\+B\+\_\+\+Type}       $\ast$)     {\bf S\+C\+B\+\_\+\+B\+A\+S\+E}      )}\label{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}
+S\+C\+B configuration struct \hypertarget{group___c_m_s_i_s__core__base_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}{}\index{Core Definitions@{Core Definitions}!S\+C\+B\+\_\+\+B\+A\+S\+E@{S\+C\+B\+\_\+\+B\+A\+S\+E}}
+\index{S\+C\+B\+\_\+\+B\+A\+S\+E@{S\+C\+B\+\_\+\+B\+A\+S\+E}!Core Definitions@{Core Definitions}}
+\subsubsection[{S\+C\+B\+\_\+\+B\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+B\+\_\+\+B\+A\+S\+E~({\bf S\+C\+S\+\_\+\+B\+A\+S\+E} +  0x0\+D00\+U\+L)}\label{group___c_m_s_i_s__core__base_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}
+System Control Block Base Address \hypertarget{group___c_m_s_i_s__core__base_ga3c14ed93192c8d9143322bbf77ebf770}{}\index{Core Definitions@{Core Definitions}!S\+C\+S\+\_\+\+B\+A\+S\+E@{S\+C\+S\+\_\+\+B\+A\+S\+E}}
+\index{S\+C\+S\+\_\+\+B\+A\+S\+E@{S\+C\+S\+\_\+\+B\+A\+S\+E}!Core Definitions@{Core Definitions}}
+\subsubsection[{S\+C\+S\+\_\+\+B\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+S\+\_\+\+B\+A\+S\+E~(0x\+E000\+E000\+U\+L)}\label{group___c_m_s_i_s__core__base_ga3c14ed93192c8d9143322bbf77ebf770}
+System Control Space Base Address \hypertarget{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{}\index{Core Definitions@{Core Definitions}!Sys\+Tick@{Sys\+Tick}}
+\index{Sys\+Tick@{Sys\+Tick}!Core Definitions@{Core Definitions}}
+\subsubsection[{Sys\+Tick}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sys\+Tick~(({\bf Sys\+Tick\+\_\+\+Type}   $\ast$)     {\bf Sys\+Tick\+\_\+\+B\+A\+S\+E}  )}\label{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}
+Sys\+Tick configuration struct \hypertarget{group___c_m_s_i_s__core__base_ga58effaac0b93006b756d33209e814646}{}\index{Core Definitions@{Core Definitions}!Sys\+Tick\+\_\+\+B\+A\+S\+E@{Sys\+Tick\+\_\+\+B\+A\+S\+E}}
+\index{Sys\+Tick\+\_\+\+B\+A\+S\+E@{Sys\+Tick\+\_\+\+B\+A\+S\+E}!Core Definitions@{Core Definitions}}
+\subsubsection[{Sys\+Tick\+\_\+\+B\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Sys\+Tick\+\_\+\+B\+A\+S\+E~({\bf S\+C\+S\+\_\+\+B\+A\+S\+E} +  0x0010\+U\+L)}\label{group___c_m_s_i_s__core__base_ga58effaac0b93006b756d33209e814646}
+Sys\+Tick Base Address 

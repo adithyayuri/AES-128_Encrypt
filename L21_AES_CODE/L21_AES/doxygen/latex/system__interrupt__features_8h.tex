@@ -1,0 +1,67 @@
+\hypertarget{system__interrupt__features_8h}{}\section{src/\+A\+S\+F/sam0/drivers/system/interrupt/system\+\_\+interrupt\+\_\+saml21/system\+\_\+interrupt\+\_\+features.h File Reference}
+\label{system__interrupt__features_8h}\index{src/\+A\+S\+F/sam0/drivers/system/interrupt/system\+\_\+interrupt\+\_\+saml21/system\+\_\+interrupt\+\_\+features.\+h@{src/\+A\+S\+F/sam0/drivers/system/interrupt/system\+\_\+interrupt\+\_\+saml21/system\+\_\+interrupt\+\_\+features.\+h}}
+
+
+S\+A\+M L21 System Interrupt Driver.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{system__interrupt__features_8h_a5f447c3c9a0b86f6921e3fdb8b2cc139}{}\#define {\bfseries \+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+R\+Qn}(n,  module)~S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\#\#module\#\#n = module\#\#n\#\#\+\_\+\+I\+R\+Qn,\label{system__interrupt__features_8h_a5f447c3c9a0b86f6921e3fdb8b2cc139}
+
+\item 
+\hypertarget{system__interrupt__features_8h_ab7e6af272c2eb65be15e809c4113720b}{}\#define {\bfseries \+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+S}(name)~\hyperlink{group__group__sam0__utils__mrepeat_ga42db715ccb877ca87d7903f5783bd104}{M\+R\+E\+P\+E\+A\+T}(name\#\#\+\_\+\+I\+N\+S\+T\+\_\+\+N\+U\+M, \+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+I\+R\+Qn, name)\label{system__interrupt__features_8h_ab7e6af272c2eb65be15e809c4113720b}
+
+\item 
+\hypertarget{system__interrupt__features_8h_af6b4c1232c9553b11b1175bccad4f01d}{}\#define {\bfseries \+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+I\+P\+S\+R\+\_\+\+M\+A\+S\+K}~0x0000003f\label{system__interrupt__features_8h_af6b4c1232c9553b11b1175bccad4f01d}
+
+\item 
+\hypertarget{system__interrupt__features_8h_a01775ec1836e737a8401f575cc71767f}{}\#define {\bfseries \+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+S\+K}~0x00000003\label{system__interrupt__features_8h_a01775ec1836e737a8401f575cc71767f}
+
+\item 
+\hypertarget{system__interrupt__features_8h_af55cfc23a39adbfbeb5f37a25dc96f77}{}\#define {\bfseries \+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+T\+A\+R\+T}~0\label{system__interrupt__features_8h_af55cfc23a39adbfbeb5f37a25dc96f77}
+
+\item 
+\hypertarget{system__interrupt__features_8h_a1487f18a015d9f356dec0382b3817d31}{}\#define {\bfseries \+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+P\+R\+I\+\_\+\+P\+O\+S}~30\label{system__interrupt__features_8h_a1487f18a015d9f356dec0382b3817d31}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__system__interrupt__group_ga43378e6222cc05290c1a0c6a9ba125cf}{system\+\_\+interrupt\+\_\+vector} \{ \\*
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa8967f7e5e661234c374fd8fe6a7c7b4a}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+N\+O\+N\+\_\+\+M\+A\+S\+K\+A\+B\+L\+E} = Non\+Maskable\+Int\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfabef47b275e187a3c4cc3d79fdefeb43a}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+H\+A\+R\+D\+\_\+\+F\+A\+U\+L\+T} = Hard\+Fault\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa91a0f47299fac0d5a4bbd776a049a7a1}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+V\+\_\+\+C\+A\+L\+L} = S\+V\+Call\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa9aa2c667976293c6b9a0f046984696aa}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+P\+E\+N\+D\+I\+N\+G\+\_\+\+S\+V} = Pend\+S\+V\+\_\+\+I\+R\+Qn, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfadef3a6521ea01f9fa669fa3951d97668}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+S\+Y\+S\+T\+I\+C\+K} = Sys\+Tick\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfac73f9b36d1b5d6db8b43f37982e90658}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+S\+Y\+S\+T\+E\+M} = S\+Y\+S\+T\+E\+M\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa02ba7488cb2e602f86b42848bff250b4}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+W\+D\+T} = W\+D\+T\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfab7c8739bd4a9cd7616ba30a9dd2ef1f8}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+R\+T\+C} = R\+T\+C\+\_\+\+I\+R\+Qn, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa78111f06deafa9412afd0eb7c2bf88bf}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+E\+I\+C} = E\+I\+C\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfac04b00eaa6c6c9eb2bd9695fc63dd5fd}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+N\+V\+M\+C\+T\+R\+L} = N\+V\+M\+C\+T\+R\+L\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa6877b7836295a225ed562d94398c7588}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+D\+M\+A} = D\+M\+A\+C\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfaca924beac36d76d104b563ed13b70d44}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+U\+S\+B} = U\+S\+B\+\_\+\+I\+R\+Qn, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa15167598ce4e6982800cb394ceabf901}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+E\+V\+S\+Y\+S} = E\+V\+S\+Y\+S\+\_\+\+I\+R\+Qn, 
+{\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+T\+C0} = T\+C0\+\_\+\+I\+R\+Qn, 
+{\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+T\+C1} = T\+C1\+\_\+\+I\+R\+Qn, 
+{\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+T\+C4} = T\+C4\+\_\+\+I\+R\+Qn, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfaa390b62747f343615e8bf32df0ea9871}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+A\+C} = A\+C\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfabe508bdf9df07e4f95b69118525cc3c6}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+A\+D\+C} = A\+D\+C\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa9875c5d3f3d47908b3553e180525059d}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+D\+A\+C} = D\+A\+C\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa58c9629046578c61a18fbbe9329abe0e}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+P\+T\+C} = P\+T\+C\+\_\+\+I\+R\+Qn, 
+\\*
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfaa0cea415e3aa2a7edf102225d45463a6}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+A\+E\+S} = A\+E\+S\+\_\+\+I\+R\+Qn, 
+\hyperlink{group__asfdoc__sam0__system__interrupt__group_gga43378e6222cc05290c1a0c6a9ba125cfa3b5fc8055a1b38f99e16b5d79d229bda}{S\+Y\+S\+T\+E\+M\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+T\+R\+N\+G} = T\+R\+N\+G\+\_\+\+I\+R\+Qn
+ \}
+\begin{DoxyCompactList}\small\item\em Table of possible system interrupt/exception vector numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+A\+M L21 System Interrupt Driver. 
+
+Copyright (C) 2014-\/2015 Atmel Corporation. All rights reserved.

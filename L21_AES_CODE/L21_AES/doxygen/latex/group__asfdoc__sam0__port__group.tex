@@ -1,0 +1,183 @@
+\hypertarget{group__asfdoc__sam0__port__group}{}\section{S\+A\+M Port (P\+O\+R\+T) Driver}
+\label{group__asfdoc__sam0__port__group}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structport__config}{port\+\_\+config}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_port}{Port} pin configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__asfdoc__sam0__port__group_gabe12893c067f9b011ece79c1bf1b128a}{port\+\_\+pin\+\_\+dir} \{ \hyperlink{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aacfdf36142de0378cd9927b9c00e2f7a6}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T, 
+\hyperlink{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aaa2cda8b4095bfaf6f354f113947a3463}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T, 
+\hyperlink{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aae3d3fdfe355c7727ea36948da3b848ad}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+I\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K
+ \}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_port}{Port} pin direction configuration enum. \end{DoxyCompactList}\item 
+enum \hyperlink{group__asfdoc__sam0__port__group_ga1f47828261f5b7ac5f864b42981a2004}{port\+\_\+pin\+\_\+pull} \{ \hyperlink{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004ab178b34fb381794e7f550b14ff08a302}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E, 
+\hyperlink{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a6505b9a836a818d1f2c8a248b9ac8073}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P, 
+\hyperlink{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a2665866a5f05266cc8fa78da60ebc19d}{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N} = S\+Y\+S\+T\+E\+M\+\_\+\+P\+I\+N\+M\+U\+X\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N
+ \}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_port}{Port} pin input pull configuration enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Configuration and Initialization}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__port__group_gad21f235037f2d75ee3e7c08ba8b239c5}{port\+\_\+pin\+\_\+set\+\_\+config} (const uint8\+\_\+t gpio\+\_\+pin, const struct \hyperlink{structport__config}{port\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{struct_port}{Port} pin configuration to the hardware module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__port__group_ga7b832928bee6911ac7c9f18df8a5cf4a}{port\+\_\+group\+\_\+set\+\_\+config} (\hyperlink{struct_port_group}{Port\+Group} $\ast$const port, const uint32\+\_\+t mask, const struct \hyperlink{structport__config}{port\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Writes a \hyperlink{struct_port}{Port} group configuration group to the hardware module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This driver for Atmel\textregistered{} $\vert$ S\+M\+A\+R\+T A\+R\+M\textregistered{}-\/based microcontrollers provides an interface for the configuration and management of the device's General Purpose Input/\+Output (G\+P\+I\+O) pin functionality, for manual pin state reading and writing.
+
+The following peripheral is used by this module\+:
+\begin{DoxyItemize}
+\item P\+O\+R\+T (G\+P\+I\+O Management)
+\end{DoxyItemize}
+
+The following devices can use this module\+:
+\begin{DoxyItemize}
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M D20/\+D21
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M R21
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M D09/\+D10/\+D11
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M L21/\+L22
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M D\+A1
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M C20/\+C21
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M H\+A1
+\item Atmel $\vert$ S\+M\+A\+R\+T S\+A\+M R30
+\end{DoxyItemize}
+
+The outline of this documentation is as follows\+:
+\begin{DoxyItemize}
+\item \hyperlink{group__asfdoc__sam0__port__group_asfdoc_sam0_port_prerequisites}{Prerequisites}
+\item \hyperlink{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_overview}{Module Overview}
+\item \hyperlink{group__asfdoc__sam0__port__group_asfdoc_sam0_port_special_considerations}{Special Considerations}
+\item \hyperlink{group__asfdoc__sam0__port__group_asfdoc_sam0_port_extra_info}{Extra Information}
+\item \hyperlink{group__asfdoc__sam0__port__group_asfdoc_sam0_port_examples}{Examples}
+\item \hyperlink{group__asfdoc__sam0__port__group_asfdoc_sam0_port_api_overview}{A\+P\+I Overview}
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_prerequisites}{}\subsection{Prerequisites}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_prerequisites}
+There are no prerequisites for this module.\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_overview}{}\subsection{Module Overview}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_overview}
+The device G\+P\+I\+O (P\+O\+R\+T) module provides an interface between the user application logic and external hardware peripherals, when general pin state manipulation is required. This driver provides an easy-\/to-\/use interface to the physical pin input samplers and output drivers, so that pins can be read from or written to for general purpose external hardware control.\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_features}{}\subsubsection{Driver Feature Macro Definition}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_features}
+\begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Driver Feature Macro }&{\bf Supported devices  }\\\cline{1-2}
+F\+E\+A\+T\+U\+R\+E\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+P\+U\+T\+\_\+\+E\+V\+E\+N\+T &S\+A\+M L21/\+L22/\+C20/\+C21/\+R30  \\\cline{1-2}
+\end{TabularC}
+\begin{DoxyNote}{Note}
+The specific features are only available in the driver when the selected device supports those features.
+\end{DoxyNote}
+\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_overview_pin_numbering}{}\subsubsection{Physical and Logical G\+P\+I\+O Pins}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_overview_pin_numbering}
+S\+A\+M devices use two naming conventions for the I/\+O pins in the device; one physical and one logical. Each physical pin on a device package is assigned both a physical port and pin identifier (e.\+g. \char`\"{}\+P\+O\+R\+T\+A.\+0\char`\"{}) as well as a monotonically incrementing logical G\+P\+I\+O number (e.\+g. \char`\"{}\+G\+P\+I\+O0\char`\"{}). While the former is used to map physical pins to their physical internal device module counterparts, for simplicity the design of this driver uses the logical G\+P\+I\+O numbers instead.\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_overview_physical}{}\subsubsection{Physical Connection}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_overview_physical}
+\hyperlink{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_int_connections}{The diagram below} shows how this module is interconnected within the device.
+
+\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_int_connections}%
+\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_module_int_connections}{}%
+\begin{center}
+
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{dot_inline_dotgraph_1}}
+\end{DoxyImageNoCaption}
+\end{center}
+\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_special_considerations}{}\subsection{Special Considerations}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_special_considerations}
+The S\+A\+M port pin input sampler can be disabled when the pin is configured in pure output mode to save power; reading the pin state of a pin configured in output-\/only mode will read the logical output state that was last set.\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_extra_info}{}\subsection{Extra Information}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_extra_info}
+For extra information, see \hyperlink{asfdoc_sam0_port_extra}{Extra Information for P\+O\+R\+T Driver}. This includes\+:
+\begin{DoxyItemize}
+\item \hyperlink{asfdoc_sam0_port_extra_asfdoc_sam0_port_extra_acronyms}{Acronyms}
+\item \hyperlink{asfdoc_sam0_port_extra_asfdoc_sam0_port_extra_dependencies}{Dependencies}
+\item \hyperlink{asfdoc_sam0_port_extra_asfdoc_sam0_port_extra_errata}{Errata}
+\item \hyperlink{asfdoc_sam0_port_extra_asfdoc_sam0_port_extra_history}{Module History}
+\end{DoxyItemize}\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_examples}{}\subsection{Examples}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_examples}
+For a list of examples related to this driver, see \hyperlink{asfdoc_sam0_port_exqsg}{Examples for P\+O\+R\+T Driver}.\hypertarget{group__asfdoc__sam0__port__group_asfdoc_sam0_port_api_overview}{}\subsection{A\+P\+I Overview}\label{group__asfdoc__sam0__port__group_asfdoc_sam0_port_api_overview}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__asfdoc__sam0__port__group_gabe12893c067f9b011ece79c1bf1b128a}{}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!port\+\_\+pin\+\_\+dir@{port\+\_\+pin\+\_\+dir}}
+\index{port\+\_\+pin\+\_\+dir@{port\+\_\+pin\+\_\+dir}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}
+\subsubsection[{port\+\_\+pin\+\_\+dir}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf port\+\_\+pin\+\_\+dir}}\label{group__asfdoc__sam0__port__group_gabe12893c067f9b011ece79c1bf1b128a}
+
+
+\hyperlink{struct_port}{Port} pin direction configuration enum. 
+
+Convenience definition for G\+P\+I\+O module group A on the device (if available). Enum for the possible pin direction settings of the port pin configuration structure, to indicate the direction the pin should use. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aacfdf36142de0378cd9927b9c00e2f7a6}{}P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+I\+N\+P\+U\+T\label{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aacfdf36142de0378cd9927b9c00e2f7a6}
+}]The pin's input buffer should be enabled, so that the pin state can be read \index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aaa2cda8b4095bfaf6f354f113947a3463}{}P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\label{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aaa2cda8b4095bfaf6f354f113947a3463}
+}]The pin's output buffer should be enabled, so that the pin state can be set \index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aae3d3fdfe355c7727ea36948da3b848ad}{}P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+D\+I\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+W\+T\+H\+\_\+\+R\+E\+A\+D\+B\+A\+C\+K\label{group__asfdoc__sam0__port__group_ggabe12893c067f9b011ece79c1bf1b128aae3d3fdfe355c7727ea36948da3b848ad}
+}]The pin's output and input buffers should be enabled, so that the pin state can be set and read back \end{description}
+\end{Desc}
+\hypertarget{group__asfdoc__sam0__port__group_ga1f47828261f5b7ac5f864b42981a2004}{}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!port\+\_\+pin\+\_\+pull@{port\+\_\+pin\+\_\+pull}}
+\index{port\+\_\+pin\+\_\+pull@{port\+\_\+pin\+\_\+pull}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}
+\subsubsection[{port\+\_\+pin\+\_\+pull}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf port\+\_\+pin\+\_\+pull}}\label{group__asfdoc__sam0__port__group_ga1f47828261f5b7ac5f864b42981a2004}
+
+
+\hyperlink{struct_port}{Port} pin input pull configuration enum. 
+
+Enum for the possible pin pull settings of the port pin configuration structure, to indicate the type of logic level pull the pin should use. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004ab178b34fb381794e7f550b14ff08a302}{}P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+N\+O\+N\+E\label{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004ab178b34fb381794e7f550b14ff08a302}
+}]No logical pull should be applied to the pin \index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a6505b9a836a818d1f2c8a248b9ac8073}{}P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+U\+P\label{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a6505b9a836a818d1f2c8a248b9ac8073}
+}]Pin should be pulled up when idle \index{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N@{P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N}}\item[{\em 
+\hypertarget{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a2665866a5f05266cc8fa78da60ebc19d}{}P\+O\+R\+T\+\_\+\+P\+I\+N\+\_\+\+P\+U\+L\+L\+\_\+\+D\+O\+W\+N\label{group__asfdoc__sam0__port__group_gga1f47828261f5b7ac5f864b42981a2004a2665866a5f05266cc8fa78da60ebc19d}
+}]Pin should be pulled down when idle \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__asfdoc__sam0__port__group_ga7b832928bee6911ac7c9f18df8a5cf4a}{}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!port\+\_\+group\+\_\+set\+\_\+config@{port\+\_\+group\+\_\+set\+\_\+config}}
+\index{port\+\_\+group\+\_\+set\+\_\+config@{port\+\_\+group\+\_\+set\+\_\+config}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}
+\subsubsection[{port\+\_\+group\+\_\+set\+\_\+config}]{\setlength{\rightskip}{0pt plus 5cm}void port\+\_\+group\+\_\+set\+\_\+config (
+\begin{DoxyParamCaption}
+\item[{{\bf Port\+Group} $\ast$const}]{port, }
+\item[{const uint32\+\_\+t}]{mask, }
+\item[{const struct {\bf port\+\_\+config} $\ast$const}]{config}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__port__group_ga7b832928bee6911ac7c9f18df8a5cf4a}
+
+
+Writes a \hyperlink{struct_port}{Port} group configuration group to the hardware module. 
+
+Writes out a given configuration of a \hyperlink{struct_port}{Port} group configuration to the hardware module.
+
+\begin{DoxyNote}{Note}
+If the pin direction is set as an output, the pull-\/up/pull-\/down input configuration setting is ignored.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em port} & Base of the P\+O\+R\+T module to write to \\
+\hline
+\mbox{\tt in}  & {\em mask} & Mask of the port pin(s) to configure \\
+\hline
+\mbox{\tt in}  & {\em config} & Configuration settings for the pin group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__asfdoc__sam0__port__group_gad21f235037f2d75ee3e7c08ba8b239c5}{}\index{S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}!port\+\_\+pin\+\_\+set\+\_\+config@{port\+\_\+pin\+\_\+set\+\_\+config}}
+\index{port\+\_\+pin\+\_\+set\+\_\+config@{port\+\_\+pin\+\_\+set\+\_\+config}!S\+A\+M Port (\+P\+O\+R\+T) Driver@{S\+A\+M Port (\+P\+O\+R\+T) Driver}}
+\subsubsection[{port\+\_\+pin\+\_\+set\+\_\+config}]{\setlength{\rightskip}{0pt plus 5cm}void port\+\_\+pin\+\_\+set\+\_\+config (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t}]{gpio\+\_\+pin, }
+\item[{const struct {\bf port\+\_\+config} $\ast$const}]{config}
+\end{DoxyParamCaption}
+)}\label{group__asfdoc__sam0__port__group_gad21f235037f2d75ee3e7c08ba8b239c5}
+
+
+Writes a \hyperlink{struct_port}{Port} pin configuration to the hardware module. 
+
+Writes out a given configuration of a \hyperlink{struct_port}{Port} pin configuration to the hardware module.
+
+\begin{DoxyNote}{Note}
+If the pin direction is set as an output, the pull-\/up/pull-\/down input configuration setting is ignored.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gpio\+\_\+pin} & Index of the G\+P\+I\+O pin to configure \\
+\hline
+\mbox{\tt in}  & {\em config} & Configuration settings for the pin \\
+\hline
+\end{DoxyParams}

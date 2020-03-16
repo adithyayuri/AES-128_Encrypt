@@ -1,0 +1,164 @@
+\hypertarget{clock_8c}{}\section{src/\+A\+S\+F/sam0/drivers/system/clock/clock\+\_\+saml21/clock.c File Reference}
+\label{clock_8c}\index{src/\+A\+S\+F/sam0/drivers/system/clock/clock\+\_\+saml21/clock.\+c@{src/\+A\+S\+F/sam0/drivers/system/clock/clock\+\_\+saml21/clock.\+c}}
+
+
+S\+A\+M L21 Clock Driver.  
+
+
+{\ttfamily \#include $<$clock.\+h$>$}\\*
+{\ttfamily \#include $<$conf\+\_\+clocks.\+h$>$}\\*
+{\ttfamily \#include $<$system.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}clock\+\_\+config\+\_\+check.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__system__clock__dfll__config}{\+\_\+system\+\_\+clock\+\_\+dfll\+\_\+config}
+\item 
+struct \hyperlink{struct__system__clock__dpll__config}{\+\_\+system\+\_\+clock\+\_\+dpll\+\_\+config}
+\item 
+struct \hyperlink{struct__system__clock__xosc__config}{\+\_\+system\+\_\+clock\+\_\+xosc\+\_\+config}
+\item 
+struct \hyperlink{struct__system__clock__module}{\+\_\+system\+\_\+clock\+\_\+module}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G}(n,  \hyperlink{group__group__sam0__utils_ga417dba7f63dde98dbebd6336d8af9d91}{unused})
+\item 
+\hypertarget{clock_8c_ae6e641f89e6d2e851ea812ef537ad3f6}{}\#define {\bfseries \+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+N\+O\+N\+M\+A\+I\+N}(n,  \hyperlink{group__group__sam0__utils_ga417dba7f63dde98dbebd6336d8af9d91}{unused})~if (n $>$ 0) \{ \+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G(n, \hyperlink{group__group__sam0__utils_ga417dba7f63dde98dbebd6336d8af9d91}{unused}); \}\label{clock_8c_ae6e641f89e6d2e851ea812ef537ad3f6}
+
+\item 
+\hypertarget{clock_8c_a7322bdb38c13660d8b2e086c39566ba8}{}\#define {\bfseries N\+V\+M\+\_\+\+D\+F\+L\+L\+\_\+\+C\+O\+A\+R\+S\+E\+\_\+\+P\+O\+S}~26 /$\ast$ D\+F\+L\+L48\+M Coarse calibration value bit position.$\ast$/\label{clock_8c_a7322bdb38c13660d8b2e086c39566ba8}
+
+\item 
+\hypertarget{clock_8c_af3db97c848314d070173441f6d189e22}{}\#define {\bfseries N\+V\+M\+\_\+\+D\+F\+L\+L\+\_\+\+C\+O\+A\+R\+S\+E\+\_\+\+S\+I\+Z\+E}~6  /$\ast$ D\+F\+L\+L48\+M Coarse calibration value bit size.$\ast$/\label{clock_8c_af3db97c848314d070173441f6d189e22}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{group__asfdoc__sam0__system__clock__group_ga1894d901b7ed10e4c1e52a784c8962be}{system\+\_\+clock\+\_\+source\+\_\+get\+\_\+hz} (const enum \hyperlink{group__asfdoc__sam0__system__clock__group_ga86882dc960f2552722e9713da97fcc58}{system\+\_\+clock\+\_\+source} clock\+\_\+source)
+\begin{DoxyCompactList}\small\item\em Retrieve the frequency of a clock source. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_ga15179882c18d7e09753939c4d1d136cc}{system\+\_\+clock\+\_\+source\+\_\+osc16m\+\_\+set\+\_\+config} (struct \hyperlink{structsystem__clock__source__osc16m__config}{system\+\_\+clock\+\_\+source\+\_\+osc16m\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the internal O\+S\+C16\+M oscillator clock source. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_ga9c110273354846e5a6cf877d6180296f}{system\+\_\+clock\+\_\+source\+\_\+osc32k\+\_\+set\+\_\+config} (struct \hyperlink{structsystem__clock__source__osc32k__config}{system\+\_\+clock\+\_\+source\+\_\+osc32k\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the internal O\+S\+C32\+K oscillator clock source. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_gab4e78c66dccd26a38cbf1e32af9da6d1}{system\+\_\+clock\+\_\+source\+\_\+osculp32k\+\_\+set\+\_\+config} (struct \hyperlink{structsystem__clock__source__osculp32k__config}{system\+\_\+clock\+\_\+source\+\_\+osculp32k\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the internal O\+S\+C\+U\+L\+P32\+K oscillator clock source. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_gacd16e7e13de08d55c028620d845a5cb5}{system\+\_\+clock\+\_\+source\+\_\+xosc\+\_\+set\+\_\+config} (struct \hyperlink{structsystem__clock__source__xosc__config}{system\+\_\+clock\+\_\+source\+\_\+xosc\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the external oscillator clock source. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_ga076bff009d78de95a0b2c9672f62b224}{system\+\_\+clock\+\_\+source\+\_\+xosc32k\+\_\+set\+\_\+config} (struct \hyperlink{structsystem__clock__source__xosc32k__config}{system\+\_\+clock\+\_\+source\+\_\+xosc32k\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the X\+O\+S\+C32\+K external 32\+K\+Hz oscillator clock source. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_gaa15073d0d4bd347bf8855ac20fd1b93c}{system\+\_\+clock\+\_\+source\+\_\+dfll\+\_\+set\+\_\+config} (struct \hyperlink{structsystem__clock__source__dfll__config}{system\+\_\+clock\+\_\+source\+\_\+dfll\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the D\+F\+L\+L clock source. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_ga9f77933df42fc50863b858b7d4201874}{system\+\_\+clock\+\_\+source\+\_\+dpll\+\_\+set\+\_\+config} (struct \hyperlink{structsystem__clock__source__dpll__config}{system\+\_\+clock\+\_\+source\+\_\+dpll\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the D\+P\+L\+L clock source. \end{DoxyCompactList}\item 
+enum \hyperlink{group__group__sam0__utils__status__codes_ga751c892e5a46b8e7d282085a5a5bf151}{status\+\_\+code} \hyperlink{clock_8c_a7f079754a7b5aa5a35f989eacba469eb}{system\+\_\+clock\+\_\+source\+\_\+write\+\_\+calibration} (const enum \hyperlink{group__asfdoc__sam0__system__clock__group_ga86882dc960f2552722e9713da97fcc58}{system\+\_\+clock\+\_\+source} clock\+\_\+source, const uint16\+\_\+t calibration\+\_\+value, const uint8\+\_\+t freq\+\_\+select)
+\begin{DoxyCompactList}\small\item\em Writes the calibration values for a given oscillator clock source. \end{DoxyCompactList}\item 
+enum \hyperlink{group__group__sam0__utils__status__codes_ga751c892e5a46b8e7d282085a5a5bf151}{status\+\_\+code} \hyperlink{clock_8c_a478a54a6d9998051d2791bea13fbcb43}{system\+\_\+clock\+\_\+source\+\_\+enable} (const enum \hyperlink{group__asfdoc__sam0__system__clock__group_ga86882dc960f2552722e9713da97fcc58}{system\+\_\+clock\+\_\+source} clock\+\_\+source)
+\begin{DoxyCompactList}\small\item\em Enables a clock source. \end{DoxyCompactList}\item 
+enum \hyperlink{group__group__sam0__utils__status__codes_ga751c892e5a46b8e7d282085a5a5bf151}{status\+\_\+code} \hyperlink{group__asfdoc__sam0__system__clock__group_gacea9ce7a68fc3b0b2a46f3a8c3d6d89b}{system\+\_\+clock\+\_\+source\+\_\+disable} (const enum \hyperlink{group__asfdoc__sam0__system__clock__group_ga86882dc960f2552722e9713da97fcc58}{system\+\_\+clock\+\_\+source} clock\+\_\+source)
+\begin{DoxyCompactList}\small\item\em Disables a clock source. \end{DoxyCompactList}\item 
+bool \hyperlink{group__asfdoc__sam0__system__clock__group_ga2f18617c9770bf1c3ab8fdac5081e65e}{system\+\_\+clock\+\_\+source\+\_\+is\+\_\+ready} (const enum \hyperlink{group__asfdoc__sam0__system__clock__group_ga86882dc960f2552722e9713da97fcc58}{system\+\_\+clock\+\_\+source} clock\+\_\+source)
+\begin{DoxyCompactList}\small\item\em Checks if a clock source is ready. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__system__clock__group_ga128236c1939f726786521434d8488b37}{system\+\_\+clock\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize clock system based on the configuration in \hyperlink{conf__clocks_8h}{conf\+\_\+clocks.\+h}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+A\+M L21 Clock Driver. 
+
+Copyright (C) 2014-\/2016 Atmel Corporation. All rights reserved.
+
+\subsection{Macro Definition Documentation}
+\hypertarget{clock_8c_ab5951ea620e3a101f57278e51608818d}{}\index{clock.\+c@{clock.\+c}!\+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G@{\+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G}}
+\index{\+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G@{\+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G}!clock.\+c@{clock.\+c}}
+\subsubsection[{\+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+C\+O\+N\+F\+\_\+\+C\+L\+O\+C\+K\+\_\+\+G\+C\+L\+K\+\_\+\+C\+O\+N\+F\+I\+G(
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{{\bf unused}}
+\end{DoxyParamCaption}
+)}\label{clock_8c_ab5951ea620e3a101f57278e51608818d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (CONF\_CLOCK\_GCLK\_##n##\_ENABLE == \textcolor{keyword}{true}) \{ \(\backslash\)
+        struct \hyperlink{structsystem__gclk__gen__config}{system\_gclk\_gen\_config} gclk\_conf;                          \(\backslash\)
+        system\_gclk\_gen\_get\_config\_defaults(&gclk\_conf);                  \(\backslash\)
+        gclk\_conf.source\_clock    = CONF\_CLOCK\_GCLK\_##n##\_CLOCK\_SOURCE;   \(\backslash\)
+        gclk\_conf.division\_factor = CONF\_CLOCK\_GCLK\_##n##\_PRESCALER;      \(\backslash\)
+        gclk\_conf.run\_in\_standby  = CONF\_CLOCK\_GCLK\_##n##\_RUN\_IN\_STANDBY; \(\backslash\)
+        gclk\_conf.output\_enable   = CONF\_CLOCK\_GCLK\_##n##\_OUTPUT\_ENABLE;  \hyperlink{group__asfdoc__sam0__system__clock__group_gacfd3360ccc8abb013f66b11ff44a5d0d}{\(\backslash\)}
+\hyperlink{group__asfdoc__sam0__system__clock__group_gacfd3360ccc8abb013f66b11ff44a5d0d}{        system\_gclk\_gen\_set\_config}(GCLK\_GENERATOR\_##n, &gclk\_conf);       
+      \hyperlink{group__asfdoc__sam0__system__clock__group_ga2bad007fcf1f649a3919dcc72dccea8b}{\(\backslash\)}
+\hyperlink{group__asfdoc__sam0__system__clock__group_ga2bad007fcf1f649a3919dcc72dccea8b}{        system\_gclk\_gen\_enable}(GCLK\_GENERATOR\_##n);                       \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{clock_8c_a478a54a6d9998051d2791bea13fbcb43}{}\index{clock.\+c@{clock.\+c}!system\+\_\+clock\+\_\+source\+\_\+enable@{system\+\_\+clock\+\_\+source\+\_\+enable}}
+\index{system\+\_\+clock\+\_\+source\+\_\+enable@{system\+\_\+clock\+\_\+source\+\_\+enable}!clock.\+c@{clock.\+c}}
+\subsubsection[{system\+\_\+clock\+\_\+source\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf status\+\_\+code} system\+\_\+clock\+\_\+source\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{const enum {\bf system\+\_\+clock\+\_\+source}}]{clock\+\_\+source}
+\end{DoxyParamCaption}
+)}\label{clock_8c_a478a54a6d9998051d2791bea13fbcb43}
+
+
+Enables a clock source. 
+
+Enables a clock source which has been previously configured.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em clock\+\_\+source} & Clock source to enable\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+T\+A\+T\+U\+S\+\_\+\+O\+K} & Clock source was enabled successfully and is ready \\
+\hline
+{\em S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G} & The clock source is not available on this device \\
+\hline
+\end{DoxyRetVals}
+\hypertarget{clock_8c_a7f079754a7b5aa5a35f989eacba469eb}{}\index{clock.\+c@{clock.\+c}!system\+\_\+clock\+\_\+source\+\_\+write\+\_\+calibration@{system\+\_\+clock\+\_\+source\+\_\+write\+\_\+calibration}}
+\index{system\+\_\+clock\+\_\+source\+\_\+write\+\_\+calibration@{system\+\_\+clock\+\_\+source\+\_\+write\+\_\+calibration}!clock.\+c@{clock.\+c}}
+\subsubsection[{system\+\_\+clock\+\_\+source\+\_\+write\+\_\+calibration}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf status\+\_\+code} system\+\_\+clock\+\_\+source\+\_\+write\+\_\+calibration (
+\begin{DoxyParamCaption}
+\item[{const enum {\bf system\+\_\+clock\+\_\+source}}]{clock\+\_\+source, }
+\item[{const uint16\+\_\+t}]{calibration\+\_\+value, }
+\item[{const uint8\+\_\+t}]{freq\+\_\+select}
+\end{DoxyParamCaption}
+)}\label{clock_8c_a7f079754a7b5aa5a35f989eacba469eb}
+
+
+Writes the calibration values for a given oscillator clock source. 
+
+Writes an oscillator calibration value to the given oscillator control registers. The acceptable ranges are\+:
+
+For O\+S\+C32\+K\+:
+\begin{DoxyItemize}
+\item 7 bits (max. value 128) For O\+S\+C16\+M\+H\+Z\+:
+\item 8 bits (max. value 255) For O\+S\+C\+U\+L\+P\+:
+\item 5 bits (max. value 32)
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The frequency range parameter applies only when configuring the 8\+M\+Hz oscillator and will be ignored for the other oscillators.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em clock\+\_\+source} & Clock source to calibrate \\
+\hline
+\mbox{\tt in}  & {\em calibration\+\_\+value} & Calibration value to write \\
+\hline
+\mbox{\tt in}  & {\em freq\+\_\+range} & Frequency range (8\+M\+Hz oscillator only)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+T\+A\+T\+U\+S\+\_\+\+O\+K} & The calibration value was written successfully \\
+\hline
+{\em S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G} & The setting is not valid for selected clock source \\
+\hline
+\end{DoxyRetVals}

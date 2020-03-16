@@ -1,0 +1,38 @@
+\hypertarget{_a_s_f_2sam0_2drivers_2aes_2aes_8c}{}\section{src/\+A\+S\+F/sam0/drivers/aes/aes.c File Reference}
+\label{_a_s_f_2sam0_2drivers_2aes_2aes_8c}\index{src/\+A\+S\+F/sam0/drivers/aes/aes.\+c@{src/\+A\+S\+F/sam0/drivers/aes/aes.\+c}}
+
+
+S\+A\+M Advanced Encryption Standard driver.  
+
+
+{\ttfamily \#include $<$aes.\+h$>$}\\*
+{\ttfamily \#include $<$system.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gad56da9d3959afcfe36876b183e5bf5ff}{aes\+\_\+get\+\_\+config\+\_\+defaults} (struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Initializes an A\+E\+S configuration structure to defaults. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae8460e5d2f7cbf1cce23fd0125f2ed38}{aes\+\_\+init} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, \hyperlink{struct_aes}{Aes} $\ast$const hw, struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Initialize the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gae41549e7221a99c62f673c65e2f5ff03}{aes\+\_\+enable} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module)
+\begin{DoxyCompactList}\small\item\em Enable the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_gab08f123acee91e3544140b8c6df7b623}{aes\+\_\+disable} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module)
+\begin{DoxyCompactList}\small\item\em Disable the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga803e7c113963451642ecd4f7c476bf9b}{aes\+\_\+set\+\_\+config} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, \hyperlink{struct_aes}{Aes} $\ast$const hw, struct \hyperlink{structaes__config}{aes\+\_\+config} $\ast$const config)
+\begin{DoxyCompactList}\small\item\em Configure the A\+E\+S module. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga736388ff9633a0549299a5e16e048f57}{aes\+\_\+write\+\_\+key} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$key)
+\begin{DoxyCompactList}\small\item\em Write the 128/192/256-\/bit cryptographic key. \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga0060dabc9035de262a49d8341079f344}{aes\+\_\+write\+\_\+init\+\_\+vector} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$vector)
+\begin{DoxyCompactList}\small\item\em Write the initialization vector (for the C\+B\+C, C\+F\+B, O\+F\+B, C\+T\+R, and G\+C\+M cipher modes). \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga451967d8225c0d3632d4ebea8d9667ee}{aes\+\_\+write\+\_\+input\+\_\+data} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, const uint32\+\_\+t $\ast$input\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Write the input data (four consecutive 32-\/bit words). \end{DoxyCompactList}\item 
+void \hyperlink{group__asfdoc__sam0__drivers__aes__group_ga7fcad6bd802773d1f2532d4dce46c007}{aes\+\_\+read\+\_\+output\+\_\+data} (struct \hyperlink{structaes__module}{aes\+\_\+module} $\ast$const module, uint32\+\_\+t $\ast$output\+\_\+data\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Read the output data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+A\+M Advanced Encryption Standard driver. 
+
+This file defines a useful set of functions for the A\+E\+S on S\+A\+M devices.
+
+Copyright (c) 2014-\/2016 Atmel Corporation. All rights reserved.

@@ -1,0 +1,108 @@
+\hypertarget{drivers_2sercom_2sercom_8h}{}\section{src/\+A\+S\+F/sam0/drivers/sercom/sercom.h File Reference}
+\label{drivers_2sercom_2sercom_8h}\index{src/\+A\+S\+F/sam0/drivers/sercom/sercom.\+h@{src/\+A\+S\+F/sam0/drivers/sercom/sercom.\+h}}
+
+
+S\+A\+M Serial Peripheral Interface Driver.  
+
+
+{\ttfamily \#include $<$compiler.\+h$>$}\\*
+{\ttfamily \#include $<$system.\+h$>$}\\*
+{\ttfamily \#include $<$clock.\+h$>$}\\*
+{\ttfamily \#include $<$system\+\_\+interrupt.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}sercom\+\_\+pinout.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{drivers_2sercom_2sercom_8h_a9eeed6dd9c0678cef4fb6124dc460a6c}{}\#define {\bfseries S\+E\+R\+C\+O\+M\+\_\+\+G\+C\+L\+K\+\_\+\+I\+D}~S\+E\+R\+C\+O\+M0\+\_\+\+G\+C\+L\+K\+\_\+\+I\+D\+\_\+\+S\+L\+O\+W\label{drivers_2sercom_2sercom_8h_a9eeed6dd9c0678cef4fb6124dc460a6c}
+
+\item 
+\hypertarget{drivers_2sercom_2sercom_8h_aba6c235d990ad389059524e6ea37c65f}{}\#define {\bfseries F\+E\+A\+T\+U\+R\+E\+\_\+\+S\+E\+R\+C\+O\+M\+\_\+\+S\+Y\+N\+C\+B\+U\+S\+Y\+\_\+\+S\+C\+H\+E\+M\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+1}\label{drivers_2sercom_2sercom_8h_aba6c235d990ad389059524e6ea37c65f}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{drivers_2sercom_2sercom_8h_a05f9e8b65fff0120fce38ee4ddd40386}{sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode} \{ {\bfseries S\+E\+R\+C\+O\+M\+\_\+\+A\+S\+Y\+N\+C\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+R\+I\+T\+H\+M\+E\+T\+I\+C} = 0, 
+{\bfseries S\+E\+R\+C\+O\+M\+\_\+\+A\+S\+Y\+N\+C\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+A\+L}
+ \}
+\begin{DoxyCompactList}\small\item\em sercom asynchronous operation mode \end{DoxyCompactList}\item 
+enum \hyperlink{drivers_2sercom_2sercom_8h_a6936fb2a7711cb55dc717256bbcacb12}{sercom\+\_\+asynchronous\+\_\+sample\+\_\+num} \{ {\bfseries S\+E\+R\+C\+O\+M\+\_\+\+A\+S\+Y\+N\+C\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+N\+U\+M\+\_\+3} = 3, 
+{\bfseries S\+E\+R\+C\+O\+M\+\_\+\+A\+S\+Y\+N\+C\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+N\+U\+M\+\_\+8} = 8, 
+{\bfseries S\+E\+R\+C\+O\+M\+\_\+\+A\+S\+Y\+N\+C\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+N\+U\+M\+\_\+16} = 16
+ \}
+\begin{DoxyCompactList}\small\item\em sercom asynchronous samples per bit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__group__sam0__utils__status__codes_ga751c892e5a46b8e7d282085a5a5bf151}{status\+\_\+code} \hyperlink{drivers_2sercom_2sercom_8h_a11de7a16f2be1223a140bfe1cd7bddca}{sercom\+\_\+set\+\_\+gclk\+\_\+generator} (const enum \hyperlink{group__asfdoc__sam0__system__clock__group_ga1ab9bb87560ad127ed982591b7d67311}{gclk\+\_\+generator} generator\+\_\+source, const bool force\+\_\+change)
+\begin{DoxyCompactList}\small\item\em Set G\+C\+L\+K channel to generator. \end{DoxyCompactList}\item 
+\hypertarget{drivers_2sercom_2sercom_8h_a85b318b3d7f70a86ff498954d9ef5f38}{}enum \hyperlink{group__group__sam0__utils__status__codes_ga751c892e5a46b8e7d282085a5a5bf151}{status\+\_\+code} {\bfseries \+\_\+sercom\+\_\+get\+\_\+sync\+\_\+baud\+\_\+val} (const uint32\+\_\+t baudrate, const uint32\+\_\+t external\+\_\+clock, uint16\+\_\+t $\ast$const baudval)\label{drivers_2sercom_2sercom_8h_a85b318b3d7f70a86ff498954d9ef5f38}
+
+\item 
+\hypertarget{drivers_2sercom_2sercom_8h_a7cdb50f562d8dd6f57b479d411d749f8}{}enum \hyperlink{group__group__sam0__utils__status__codes_ga751c892e5a46b8e7d282085a5a5bf151}{status\+\_\+code} {\bfseries \+\_\+sercom\+\_\+get\+\_\+async\+\_\+baud\+\_\+val} (const uint32\+\_\+t baudrate, const uint32\+\_\+t peripheral\+\_\+clock, uint16\+\_\+t $\ast$const baudval, enum \hyperlink{drivers_2sercom_2sercom_8h_a05f9e8b65fff0120fce38ee4ddd40386}{sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode} mode, enum \hyperlink{drivers_2sercom_2sercom_8h_a6936fb2a7711cb55dc717256bbcacb12}{sercom\+\_\+asynchronous\+\_\+sample\+\_\+num} sample\+\_\+num)\label{drivers_2sercom_2sercom_8h_a7cdb50f562d8dd6f57b479d411d749f8}
+
+\item 
+\hypertarget{drivers_2sercom_2sercom_8h_aed7ed6bae9edba2fec050eaaf6ab1b7c}{}uint32\+\_\+t {\bfseries \+\_\+sercom\+\_\+get\+\_\+default\+\_\+pad} (\hyperlink{union_sercom}{Sercom} $\ast$const sercom\+\_\+module, const uint8\+\_\+t pad)\label{drivers_2sercom_2sercom_8h_aed7ed6bae9edba2fec050eaaf6ab1b7c}
+
+\item 
+\hypertarget{drivers_2sercom_2sercom_8h_af3213138e698446dc57b4844114ce93e}{}uint8\+\_\+t {\bfseries \+\_\+sercom\+\_\+get\+\_\+sercom\+\_\+inst\+\_\+index} (\hyperlink{union_sercom}{Sercom} $\ast$const sercom\+\_\+instance)\label{drivers_2sercom_2sercom_8h_af3213138e698446dc57b4844114ce93e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+A\+M Serial Peripheral Interface Driver. 
+
+Copyright (C) 2012-\/2015 Atmel Corporation. All rights reserved.
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{drivers_2sercom_2sercom_8h_a05f9e8b65fff0120fce38ee4ddd40386}{}\index{drivers/sercom/sercom.\+h@{drivers/sercom/sercom.\+h}!sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode@{sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode}}
+\index{sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode@{sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode}!drivers/sercom/sercom.\+h@{drivers/sercom/sercom.\+h}}
+\subsubsection[{sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sercom\+\_\+asynchronous\+\_\+operation\+\_\+mode}}\label{drivers_2sercom_2sercom_8h_a05f9e8b65fff0120fce38ee4ddd40386}
+
+
+sercom asynchronous operation mode 
+
+Select sercom asynchronous operation mode \hypertarget{drivers_2sercom_2sercom_8h_a6936fb2a7711cb55dc717256bbcacb12}{}\index{drivers/sercom/sercom.\+h@{drivers/sercom/sercom.\+h}!sercom\+\_\+asynchronous\+\_\+sample\+\_\+num@{sercom\+\_\+asynchronous\+\_\+sample\+\_\+num}}
+\index{sercom\+\_\+asynchronous\+\_\+sample\+\_\+num@{sercom\+\_\+asynchronous\+\_\+sample\+\_\+num}!drivers/sercom/sercom.\+h@{drivers/sercom/sercom.\+h}}
+\subsubsection[{sercom\+\_\+asynchronous\+\_\+sample\+\_\+num}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf sercom\+\_\+asynchronous\+\_\+sample\+\_\+num}}\label{drivers_2sercom_2sercom_8h_a6936fb2a7711cb55dc717256bbcacb12}
+
+
+sercom asynchronous samples per bit 
+
+Select number of samples per bit 
+
+\subsection{Function Documentation}
+\hypertarget{drivers_2sercom_2sercom_8h_a11de7a16f2be1223a140bfe1cd7bddca}{}\index{drivers/sercom/sercom.\+h@{drivers/sercom/sercom.\+h}!sercom\+\_\+set\+\_\+gclk\+\_\+generator@{sercom\+\_\+set\+\_\+gclk\+\_\+generator}}
+\index{sercom\+\_\+set\+\_\+gclk\+\_\+generator@{sercom\+\_\+set\+\_\+gclk\+\_\+generator}!drivers/sercom/sercom.\+h@{drivers/sercom/sercom.\+h}}
+\subsubsection[{sercom\+\_\+set\+\_\+gclk\+\_\+generator}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf status\+\_\+code} sercom\+\_\+set\+\_\+gclk\+\_\+generator (
+\begin{DoxyParamCaption}
+\item[{const enum {\bf gclk\+\_\+generator}}]{generator\+\_\+source, }
+\item[{const bool}]{force\+\_\+change}
+\end{DoxyParamCaption}
+)}\label{drivers_2sercom_2sercom_8h_a11de7a16f2be1223a140bfe1cd7bddca}
+
+
+Set G\+C\+L\+K channel to generator. 
+
+This will set the appropriate G\+C\+L\+K channel to the requested G\+C\+L\+K generator. This will set the generator for all S\+E\+R\+C\+O\+M instances, and the user will thus only be able to set the same generator that has previously been set, if any.
+
+After the generator has been set the first time, the generator can be changed using the {\ttfamily force\+\_\+change} flag.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em generator\+\_\+source} & The generator to use for S\+E\+R\+C\+O\+M. \\
+\hline
+\mbox{\tt in}  & {\em force\+\_\+change} & Force change the generator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code indicating the G\+C\+L\+K generator change operation. 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em S\+T\+A\+T\+U\+S\+\_\+\+O\+K} & If the generator update request was successful. \\
+\hline
+{\em S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+D} & If a generator was already configured and the new configuration was not forced. \\
+\hline
+\end{DoxyRetVals}
